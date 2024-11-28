@@ -1,0 +1,403 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Spicy+Rice&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    font-family: "Lilita One", sans-serif;
+    background-color: #fff8ec;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+img {
+    max-width: 100%;
+}
+
+.container {
+    max-width: 100%; /* Make the container full-width */
+    margin: 0 auto;
+    padding: 0 50px;
+}
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Menú llamativo */
+.menu {
+    background-color: rgba(255, 255, 255, 0.9); /* Ligera transparencia */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    padding: 15px 50px; /* Ajusta el padding para espaciar mejor el contenido */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+
+.logo img {
+    max-width: 150px;
+    object-fit:contain;
+}
+
+.menu .navbar ul li {
+    position: relative;
+    float: left;
+}
+
+.menu .navbar ul li a {
+    font-size: 34px; /* Ajusta el tamaño de la fuente si es muy grande */
+    color: #0f165ae8;
+    padding: 10px 20px; /* Reduce el espaciado para compactar el menú */
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.menu .navbar ul {
+    display: flex;
+    gap: 20px;
+}
+
+.menu .navbar ul li a:hover {
+    background-color: #ffc83c;
+    color: #fff;
+}
+
+#menu {
+    display: none;
+}
+
+.menu-icono {
+    width: 25px;
+    height: 25px;
+    display: block;
+}
+
+.menu label {
+    cursor: pointer;
+    display: none;
+}
+
+.login-icon {
+    padding-left: 20px; /* Espaciado a la izquierda del ícono */
+}
+
+.login-icon img {
+    max-width: 75px;
+    object-fit:contain;
+    cursor: pointer; /* Hace que el ícono sea clicable */
+}
+
+
+/* Sección Acerca de */
+.acerca-de {
+    padding: 100px 0; /* Ajusta el espacio superior e inferior */
+    text-align: center; /* Centra el contenido */
+    margin-top: 120px;    
+}
+
+/* Ajusta la posición del ícono */
+.acerca-de .icono {
+    margin-bottom: 10px; /* Añade espacio entre el ícono y el texto */
+    margin-right: 820px; /* Añade un pequeño margen a la derecha */
+
+}
+
+/* Estilo del texto en la sección */
+.acerca-de .texto h2 {
+    font-size: 62px; /* Tamaño del título */
+    color: #0f165a;
+    margin-bottom: 20px; /* Espaciado debajo del título */
+    margin: -150px 0 0 0; /* Margen superior negativo para subir el título */
+
+}
+
+.acerca-de .texto p {
+    font-size: 32px; /* Tamaño del texto */
+    color: #666; /* Color del texto */
+    line-height: 1.6; /* Espaciado entre líneas */
+    margin-bottom: 10px; /* Espaciado debajo del párrafo */
+    margin-top: 150px; /* Bajar texto*/ 
+}
+
+/* Contenedor de las tarjetas */
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    gap: 10px;
+    padding: 10px 0;
+    margin: 120px auto;
+}
+
+/* Estilos generales para cada tarjeta */
+.card {
+    background-color: #ffc83c;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    width: calc(25% - 20px); /* Tarjetas ocupan 25% de ancho con separación */
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.card:hover {
+    transform: scale(1.05); /* Efecto de agrandar al pasar el ratón */
+    box-shadow: 0px 6px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Contenido de la tarjeta */
+.card-content h2 {
+    font-size: 24px;
+    color: #0f165a;
+    margin-bottom: 10px;
+}
+
+.card-content p {
+    font-size: 18px;
+    color: #fff;
+}
+
+/* Estilos adicionales para las tarjetas en pantallas más pequeñas */
+@media (max-width: 768px) {
+    .card {
+        width: calc(50% - 20px); /* En pantallas más pequeñas, las tarjetas ocupan el 50% */
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        width: 100%; /* En pantallas móviles, las tarjetas ocupan el 100% */
+    }
+}
+
+/* Contenedor de detalles */
+.detalles-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed; /* Fijo para que se quede en el centro incluso al hacer scroll */
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.7); /* Fondo oscuro semitransparente */
+    z-index: 2000; /* Asegura que esté por encima de otros elementos */
+    padding: 20px;
+    visibility: hidden; /* Oculto inicialmente */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+/* Mostrar el contenedor cuando tenga la clase "show" */
+.detalles-container.show {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Si quieres que el color gris se mantenga cuando el usuario pasa el ratón por encima */
+.navbar ul li:nth-child(4) a:hover {
+    color: #555;  /* Gris más oscuro para el hover */
+}
+
+/* Estilos de la tarjeta de detalles */
+.detalles-tarjeta   {
+    background-color: #f4f4f4;
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 600px; /* Limita el ancho de la tarjeta */
+    width: 100%; /* Ocupa todo el ancho disponible */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    position: relative;
+    font-family: "Roboto Mono", serif;
+}
+
+.detalles-tarjeta .negrita{
+    font-weight: 900 ;
+}
+
+/* Botón de cerrar */
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 24px;
+    cursor: pointer;
+    color: #ff5a2c;
+}
+
+
+/* Footer*/ 
+.footer {
+    padding: 50px 0;
+    background-color: #2A223A;
+    color: #ffffff;
+    font-size: 18px;
+    margin-top: auto;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 0 50px;
+}
+
+.footer-section {
+    width: 30%;
+}
+
+.footer-section h5 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: #FF5A2C;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: #FF5A2C;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 16px;
+    color: #E0E0E0;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+/* Estilos para los íconos de redes sociales */
+.social-icons {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    justify-content: flex-start; /* Cambié a flex-start para alinearlos a la izquierda */
+    margin-top: 20px; /* Ajusta el margen superior para moverlos hacia abajo */
+    margin-left: 20px; /* Ajusta el margen izquierdo para moverlos a la izquierda */
+}
+
+.social-icons li a {
+    color: #ffffff;
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+.social-icons li a:hover {
+    color: #FF5A2C; /* Cambia de color al pasar el mouse */
+}
+
+/* Responsive para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .card {
+        width: calc(50% - 20px); /* Las tarjetas ocupan el 50% del ancho */
+    }
+
+    .menu .navbar ul li a {
+        font-size: 28px; /* Reducción del tamaño de la fuente del menú */
+        padding: 8px 15px;
+    }
+
+    .navbar {
+        flex-direction: column; /* Ajusta la disposición del navbar */
+        gap: 20px;
+    }
+
+    .acerca-de .texto h2 {
+        font-size: 48px; /* Tamaño más pequeño para pantallas medianas */
+    }
+
+    .acerca-de .texto p {
+        font-size: 28px; /* Tamaño de texto ajustado */
+    }
+
+    .footer-content {
+        flex-direction: column; /* Las secciones del pie de página se apilan verticalmente */
+        align-items: center;
+    }
+
+    .footer-section {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    .social-icons {
+        justify-content: center; /* Centra los íconos de redes sociales */
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        width: 100%; /* Las tarjetas ocupan el 100% del ancho */
+    }
+
+    .menu .navbar ul li a {
+        font-size: 24px; /* Reducción aún más para pantallas pequeñas */
+        padding: 6px 12px;
+    }
+
+    .footer {
+        padding: 30px 15px; /* Ajusta el padding del footer */
+    }
+
+    .footer-content {
+        padding: 0 20px;
+    }
+
+    .footer-section h5 {
+        font-size: 20px; /* Ajusta el tamaño del título del pie de página */
+    }
+
+    .footer-bottom {
+        font-size: 14px; /* Ajusta el tamaño de la fuente del pie de página */
+    }
+
+    .social-icons li a {
+        font-size: 20px; /* Ajusta el tamaño de los íconos */
+    }
+
+    .acerca-de .texto h2 {
+        font-size: 36px; /* Reducción de tamaño del título */
+    }
+
+    .acerca-de .texto p {
+        font-size: 24px; /* Reducción de tamaño del texto */
+    }
+}

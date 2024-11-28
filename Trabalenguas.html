@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalenguas</title>
+    <link rel="stylesheet" href="styles_trabalenguas.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+<body>
+
+        <!-- Menú -->
+        <div class="menu container">
+            <a href="index.html" class="logo">
+                <img src="Img/logo.svg" alt="Logo de la página">
+            </a>
+            <nav class="navbar">
+                <ul> 
+                    <li> <a href="index.html"> Inicio </a></li>
+                    <li> <a href="RinconDivertido.html"> Rincón Divertido </a></li>
+                    <li> <a href="ActivDidac.html"> Actividades Didácticas  </a></li>
+                    <li> <a href="ApreJug.html">  ¡A Jugar!  </a></li>
+                    <li> <a href="AcercaDe.html"> Acerca de  </a></li>
+                </ul>
+            </nav>
+        </div>  
+
+
+        <div class="intro">
+            <img src="Trabalenguas/Icono.svg" alt="Icono de Trabalenguas">
+            <div class="texto-intro">
+                <h1>Trabalenguas: El Reto de la Risa y la Velocidad</h1> <br>
+                <p>Los trabalenguas son más que simples frases; son un desafío para la lengua y 
+                    la mente. Con sonidos enredados y palabras repetitivas, intentan hacernos tropezar
+                    mientras reímos y tratamos de pronunciarlos sin equivocarnos. Son un juego donde la 
+                    velocidad y la concentración se ponen a prueba, una explosión de risas y diversión 
+                    para grandes y chicos.  <br> 
+                    ¡Atrévete a decirlos y descubre cuántas veces tu lengua se enreda en el intento!</p>
+            </div>
+        </div>
+        <div class="tongue-twister-card">
+            <h2>🗣️ Me han dicho que has dicho un dicho</h2>
+            <p class="tongue-twister">
+                Me han dicho que has dicho un dicho, un dicho que he dicho yo.
+                Ese dicho que te han dicho que yo he dicho, no lo he dicho.
+                Y si yo lo hubiera dicho, estaría muy bien dicho por haberlo dicho yo.
+            </p>
+            <div class="controls">
+                <button id="record1" onclick="startRecording(1)">🎤 Grabar</button>
+                <button id="stop1" onclick="stopRecording(1)" disabled>🛑 Parar grabación</button>
+                <button id="play1" onclick="playRecording(1)" disabled>🎧 Escuchar Grabación</button>
+            </div>
+            <audio id="audio1" controls hidden></audio>
+        </div>
+        
+        <div class="tongue-twister-card">
+            <h2>🦊 Zorro, zorro modorro</h2>
+            <p class="tongue-twister">
+                Zorro, zorro modorro, pide socorro con un gorro.
+            </p>
+            <div class="controls">
+                <button id="record2" onclick="startRecording(2)">🎤 Grabar</button>
+                <button id="stop2" onclick="stopRecording(2)" disabled>🛑 Parar grabación</button>
+                <button id="play2" onclick="playRecording(2)" disabled>🎧 Escuchar Grabación</button>
+            </div>
+            <audio id="audio2" controls hidden></audio>
+        </div>
+        
+        <div class="tongue-twister-card">
+            <h2>🚞 Ruedas del ferrocarril</h2>
+            <p class="tongue-twister">
+                Erre con erre guitarra, erre con erre barril. Rápido ruedan las ruedas del ruidoso ferrocarril.
+            </p>
+            <div class="controls">
+                <button id="record3" onclick="startRecording(3)">🎤 Grabar</button>
+                <button id="stop3" onclick="stopRecording(3)" disabled>🛑 Parar grabación</button>
+                <button id="play3" onclick="playRecording(3)" disabled>🎧 Escuchar Grabación</button>
+            </div>
+            <audio id="audio3" controls hidden></audio>
+        </div>
+
+        <div class="tongue-twister-card">
+            <h2>🌿 Perejil </h2>
+            <p class="tongue-twister">
+                Perejil comí, perejil cené, y de tanto comer perejil, me emperejilé.
+            </p>
+            <div class="controls">
+                <button id="record4" onclick="startRecording(4)">🎤 Grabar</button>
+                <button id="stop4" onclick="stopRecording(4)" disabled>🛑 Parar grabación</button>
+                <button id="play4" onclick="playRecording(4)" disabled>🎧 Escuchar Grabación</button>
+            </div>
+            <audio id="audio4" controls hidden></audio>
+        </div>
+
+        <div class="tongue-twister-card">
+            <h2>🛌 ¿Porqué la cama se llama cama? </h2>
+            <p class="tongue-twister">
+                ¿Por qué a la cama se le llama cama y a la cómoda cómoda, siendo la cómoda menos cómoda que la cama y la cama más cómoda que la cómoda?
+            </p>
+            <div class="controls">
+                <button id="record5" onclick="startRecording(5)">🎤 Grabar</button>
+                <button id="stop5" onclick="stopRecording(5)" disabled>🛑 Parar grabación</button>
+                <button id="play5" onclick="playRecording(5)" disabled>🎧 Escuchar Grabación</button>
+            </div>
+            <audio id="audio5" controls hidden></audio>
+        </div>
+
+        <div class="tongue-twister-card">
+            <h2>🐯 Tres tristes tigres </h2>
+            <p class="tongue-twister">
+                Tres tristes tigres tragaban trigo en tres tristes trastos sentados tras un trigal. Sentados tras un trigal, en tres tristes trastos tragaban trigo tres tristes tigres.            </p>
+            <div class="controls">
+                <button id="record6" onclick="startRecording(6)">🎤 Grabar</button>
+                <button id="stop6" onclick="stopRecording(6)" disabled>🛑 Parar grabación</button>
+                <button id="play6" onclick="playRecording(6)" disabled>🎧 Escuchar Grabación</button>
+            </div>
+            <audio id="audio6" controls hidden></audio>
+        </div>
+
+        <div class="tongue-twister-card">
+            <h2>👅 Si tu gusto gustara del gusto que gusta mi gusto </h2>
+            <p class="tongue-twister">
+                Si tu gusto gustara del gusto que gusta mi gusto, mi gusto gustaría del gusto que gusta tu gusto. Pero como tu gusto no gusta del gusto que gusta mi gusto, mi gusto no gusta del gusto que gusta tu gusto.
+            </p>
+            <div class="controls">
+                <button id="record7" onclick="startRecording(7)">🎤 Grabar</button>
+                <button id="stop7" onclick="stopRecording(7)" disabled>🛑 Parar grabación</button>
+                <button id="play7" onclick="playRecording(7)" disabled>🎧 Escuchar Grabación</button>
+            </div>
+            <audio id="audio7" controls hidden></audio>
+        </div>
+
+        <div class="tongue-twister-card">
+            <h2>🧂 La sal del salero saldrá salada  </h2>
+            <p class="tongue-twister">
+                La sal del salero saldrá salada y salará la sal de otros saleros cuando salga. Sala que te sala, cada salero salará de sal salada toda la sala.
+            </p>
+            <div class="controls">
+                <button id="record8" onclick="startRecording(8)">🎤 Grabar</button>
+                <button id="stop8" onclick="stopRecording(8)" disabled>🛑 Parar grabación</button>
+                <button id="play8" onclick="playRecording(8)" disabled>🎧 Escuchar Grabación</button>
+            </div>
+            <audio id="audio8" controls hidden></audio>
+        </div>
+
+        <div class="tongue-twister-card">
+            <h2>🧥 La Chaqueta de Chiqui </h2>
+            <p class="tongue-twister">
+                Chiqui era una chica chiquitita y chiquitita era la chaqueta de Chiqui. Porque si Chiqui tenía una chica chaqueta, chiquitita sería la chaqueta de Chiqui.
+            </p>
+            <div class="controls">
+                <button id="record9" onclick="startRecording(9)">🎤 Grabar</button>
+                <button id="stop9" onclick="stopRecording(9)" disabled>🛑 Parar grabación</button>
+                <button id="play9" onclick="playRecording(9)" disabled>🎧 Escuchar Grabación</button>
+            </div>
+            <audio id="audio9" controls hidden></audio>
+        </div>
+
+        <div class="tongue-twister-card">
+            <h2>🐓 Amaya tiene un gallo    </h2>
+            <p class="tongue-twister">
+                Amaya tiene un gallo que no calla, siempre está ese gallo apoyado en una valla. Si oyes gallar un gallo no falla, es el de Amaya que siempre está apoyado cantando sobe una valla.
+            </p>
+            <div class="controls">
+                <button id="record10" onclick="startRecording(10)">🎤 Grabar</button>
+                <button id="stop10" onclick="stopRecording(10)" disabled>🛑 Parar grabación</button>
+                <button id="play10" onclick="playRecording(10)" disabled>🎧 Escuchar Grabación</button>
+            </div>
+            <audio id="audio10" controls hidden></audio>
+        </div>
+            
+        <!-- Pie de página -->
+        <footer class="footer">
+            <div class="footer-content container">
+                <!-- Sección de navegación -->
+                <div class="footer-section">
+                    <h5>Información</h5>
+                    <ul>
+                        <li><a href="AcercaDe.html">Acerca de nosotros</a></li>
+                        <li><a href="TerminosCondiciones.html">Términos y Condiciones</a></li>
+                        <li><a href="PoliticaPrivacidad.html">Política de Privacidad</a></li>
+                        <!--<li><a href="#">FAQs</a></li>-->
+                    </ul>
+                </div>
+        
+                <!-- Sección de recursos -->
+                <div class="footer-section">
+                    <h5>Recursos</h5>
+                    <ul>
+                        <li><a href="ActivDidac.html">Materiales Didácticos</a></li>
+                        <li><a href="index.html">Guías</a></li>
+                        <li><a href="AcercaDe.html">Contacto</a></li>
+                    </ul>
+                </div>
+        
+                <!-- Sección de redes sociales -->
+                <div class="footer-section">
+                    <h5>Conéctate con nosotros</h5>
+                    <ul class="social-icons">
+                        <li><a href="https://www.facebook.com/profile.php?id=61565597855845" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="https://www.instagram.com/edukids546/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="https://x.com/Manzanita6432" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="www.linkedin.com/in/amparito-maximiliano-rodriguez" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Mi Pagina. Todos los derechos reservados.</p>
+            </div>
+        </footer>
+        <script src="trabalenguas.js"></script>
+
+</body>
+</html>

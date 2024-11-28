@@ -1,0 +1,423 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Spicy+Rice&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    font-family: "Lilita One", sans-serif;
+    background-color: #fff8ec;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+
+img {
+    max-width: 100%;
+}
+
+.container {
+    max-width: 100%; /* Make the container full-width */
+    margin: 0 auto;
+    padding: 0 50px;
+}
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+/* Menú llamativo */
+.menu {
+    background-color: rgba(255, 255, 255, 0.9); /* Ligera transparencia */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    padding: 15px 50px; /* Ajusta el padding para espaciar mejor el contenido */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.logo img {
+    max-width: 150px;
+    object-fit:contain;
+}
+
+.menu .navbar ul li {
+    position: relative;
+    float: left;
+}
+
+.menu .navbar ul li a {
+    font-size: 34px; /* Ajusta el tamaño de la fuente si es muy grande */
+    color: #0f165ae8;
+    padding: 10px 20px; /* Reduce el espaciado para compactar el menú */
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.menu .navbar ul {
+    display: flex;
+    gap: 20px;
+}
+
+.menu .navbar ul li a:hover {
+    background-color: #ffc83c;
+    color: #fff;
+}
+
+#menu {
+    display: none;
+}
+
+.menu-icono {
+    width: 25px;
+    height: 25px;
+    display: block;
+}
+
+.menu label {
+    cursor: pointer;
+    display: none;
+}
+
+
+/* Contenedor y Sección de Introducción */
+.intro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 50px;
+    border-radius: 10px;
+    margin-top: 2800px;
+}
+
+.intro img {
+    width: 180px;
+    height: auto;
+    margin-right: 5px;
+    transform: translateX(20px); /* Mueve la imagen  a la derecha */
+
+}
+
+.texto-intro h1 {
+    font-size: 34px;
+    color: #e51dbd;
+    margin: 0;
+    text-align: center;
+}
+
+.texto-intro p {
+    font-size: 22px;
+    color: #333;
+    text-align: center;
+}
+
+
+/* Contenedor principal */
+.main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+    justify-content: center; 
+    height: 1080px; 
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* Estilo para cada tarjeta de trabalenguas */
+.tongue-twister-card {
+    text-align: center;
+    background-color: #e3f2fd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    max-width: 650px;
+    width: 100%;
+    margin-left: 550px;
+    margin-bottom: 35px; 
+
+}
+
+
+.tongue-twister-card h2 {
+    color: #3b3b98;
+    font-size: 1.5em;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.tongue-twister {
+    font-size: 22px;
+    color: #555555;
+    margin-bottom: 15px;
+    background-color: #ffffff;
+    padding: 15px;
+    border-radius: 5px;
+}
+
+.controls {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+#record1, #record2, #record3, #record4, #record5, #record6, #record7, #record8, #record9, #record10 {
+    background-color: #6a1b9a;
+}
+
+#stop1, #stop2, #stop3, #stop4, #stop5, #stop6, #stop7, #stop8, #stop9, #stop10 {
+    background-color: #b71c1c;
+}
+
+#play1, #play2, #play3, #play4, #play5, #play6, #play7, #play8, #play9, #play10 {
+    background-color: #303f9f;
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+audio {
+    margin-top: 15px;
+    width: 100%;
+}
+
+/* Efecto de grabación en curso */
+@keyframes recording-blink {
+    0%, 100% {
+        background-color: #6a1b9a; /* Color inicial */
+        box-shadow: 0 0 10px rgba(255, 0, 0, 0.5); /* Añadir un resplandor */
+    }
+    50% {
+        background-color: #b71c1c; /* Cambia el color para simular parpadeo */
+        box-shadow: 0 0 20px rgba(255, 0, 0, 0.8); /* Mayor resplandor */
+    }
+}
+
+/* Clase para indicar que está grabando */
+.recording {
+    animation: recording-blink 1s infinite; /* Aplica la animación de parpadeo */
+    color: #fff; /* Color del texto */
+}
+
+
+
+/* Footer*/ 
+.footer {
+    padding: 50px 0;
+    background-color: #2A223A;
+    color: #ffffff;
+    font-size: 18px;
+    margin-top: 120px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 0 50px;
+}
+
+.footer-section {
+    width: 30%;
+}
+
+.footer-section h5 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: #FF5A2C;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: #FF5A2C;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 16px;
+    color: #E0E0E0;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+/* Estilos para los íconos de redes sociales */
+.social-icons {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    justify-content: flex-start; /* Cambié a flex-start para alinearlos a la izquierda */
+    margin-top: 20px; /* Ajusta el margen superior para moverlos hacia abajo */
+    margin-left: 20px; /* Ajusta el margen izquierdo para moverlos a la izquierda */
+}
+
+.social-icons li a {
+    color: #ffffff;
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+.social-icons li a:hover {
+    color: #FF5A2C; /* Cambia de color al pasar el mouse */
+}
+/* Pantallas pequeñas (móviles) */
+@media (max-width: 768px) {
+    .menu {
+        flex-direction: column;
+        padding: 10px 20px;
+        text-align: center;
+    }
+
+    .menu .navbar ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .menu .navbar ul li a {
+        font-size: 24px; /* Reduce el tamaño de las fuentes */
+        padding: 10px;
+    }
+
+    .logo img {
+        max-width: 120px; /* Ajusta el tamaño del logo */
+    }
+
+    .intro {
+        flex-direction: column; /* Cambia a un diseño en columna */
+        margin-top: 150px; /* Ajusta el margen para móviles */
+    }
+
+    .intro img {
+        width: 150px; /* Reduce el tamaño de la imagen */
+        transform: none; /* Elimina el desplazamiento */
+    }
+
+    .texto-intro h1, .texto-intro p {
+        font-size: 18px; /* Ajusta el tamaño de texto */
+        text-align: center;
+    }
+
+    .main-content {
+        height: auto; /* Deja que el contenido crezca dinámicamente */
+        padding: 10px;
+        gap: 20px;
+    }
+
+    .tongue-twister-card {
+        margin-left: 0; /* Centra las tarjetas */
+        width: 100%;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .footer-section {
+        width: 100%; /* Haz que las secciones ocupen todo el ancho */
+        margin-bottom: 20px; /* Añade espacio entre secciones */
+    }
+
+    .social-icons {
+        justify-content: center; /* Centra los íconos */
+    }
+}
+
+/* Pantallas medianas (tabletas) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    .menu .navbar ul {
+        gap: 15px;
+    }
+
+    .menu .navbar ul li a {
+        font-size: 28px; /* Ajusta el tamaño de fuente */
+    }
+
+    .intro img {
+        width: 160px; /* Ajusta el tamaño de la imagen */
+    }
+
+    .texto-intro h1, .texto-intro p {
+        font-size: 20px;
+    }
+
+    .tongue-twister-card {
+        margin-left: 0; /* Asegúrate de centrar las tarjetas */
+        width: 80%; /* Haz que las tarjetas ocupen más espacio */
+    }
+
+    .footer-content {
+        padding: 20px;
+        gap: 10px;
+    }
+
+    .footer-section {
+        width: 45%; /* Ajusta el ancho de las secciones */
+    }
+}
+
+/* Pantallas grandes (escritorio) */
+@media (min-width: 1025px) {
+    .menu {
+        padding: 20px 50px;
+    }
+
+    .main-content {
+        height: 1080px; /* Mantén el diseño original */
+    }
+
+    .tongue-twister-card {
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%; /* Ajusta el ancho para que no sea demasiado grande */
+    }
+
+    .footer-section {
+        width: 30%; /* Mantén el diseño original */
+    }
+}

@@ -1,0 +1,359 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Spicy+Rice&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    font-family: "Lilita One", sans-serif;
+    background-color: #fff8ec;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100%; /* Asegura que el cuerpo ocupe al menos toda la altura */
+    padding-bottom: 120px; /* Deja espacio para el footer */
+}
+
+img {
+    max-width: 100%;
+}
+
+.container {
+    max-width: 100%; /* Make the container full-width */
+    margin: 0 auto;
+    padding: 0 50px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Menú llamativo */
+.menu {
+    background-color: rgba(255, 255, 255, 0.9); /* Ligera transparencia */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    padding: 15px 50px; /* Ajusta el padding para espaciar mejor el contenido */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.logo img {
+    max-width: 150px;
+    object-fit: contain;
+}
+
+.menu .navbar ul li {
+    position: relative;
+    float: left;
+}
+
+.menu .navbar ul li a {
+    font-size: 34px;
+    color: #0f165ae8;
+    padding: 10px 20px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.menu .navbar ul {
+    display: flex;
+    gap: 20px;
+}
+
+.menu .navbar ul li a:hover {
+    background-color: #ffc83c;
+    color: #fff;
+}
+
+/* Menú hamburguesa */
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 30px;
+    height: 25px;
+    z-index: 1000;
+}
+
+.menu-toggle i {
+    font-size: 30px;
+    color: #0f165ae8;
+}
+
+/* Estilos para la lista de navegación */
+.navbar ul {
+    display: flex;
+    gap: 20px;
+}
+
+/* Si quieres que el color gris se mantenga cuando el usuario pasa el ratón por encima */
+.navbar ul li:nth-child(4) a:hover {
+    color: #555;  /* Gris más oscuro para el hover */
+}
+
+.navbar ul li {
+    display: inline-block;
+}
+
+.navbar ul li a {
+    font-size: 34px;
+    color: #0f165ae8;
+    padding: 10px 20px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    background-color: #ffc83c;
+    color: #fff;
+}
+
+/* Responsive: cuando la pantalla sea pequeña */
+@media (max-width: 768px) {
+    /* Ocultamos los enlaces del menú en pantallas pequeñas por defecto */
+    .navbar ul {
+        display: none;
+        width: 100%;
+        text-align: center;
+        flex-direction: column; /* Para que los enlaces se apilen */
+    }
+
+    /* Hacemos visible el ícono de menú hamburguesa */
+    .menu-toggle {
+        display: flex;
+    }
+
+    /* Estilos para el menú cuando está visible */
+    .navbar ul.show {
+        display: block;
+        width: 100%;
+        background-color: #fff;
+        position: absolute;
+        top: 70px; /* Ajuste según el alto del menú */
+        left: 0;
+        right: 0;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar ul li {
+        display: block;
+        padding: 10px 0;
+    }
+
+    .navbar ul li a {
+        font-size: 24px;
+        padding: 10px;
+    }
+}
+
+
+
+/* Contenido*/ 
+.contenedor {
+    text-align: center;
+    margin-top: 220px;
+}
+
+h1 {
+    color: #cf1757;
+    font-size: 54px;
+    margin-bottom: 45px;
+}
+
+.colores {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 bloques por fila */
+    gap: 50px;
+    max-width: 800px;
+    width: 100%;
+}
+
+.color-block {
+    width: 180px;
+    height: 180px;
+    border-radius: 10px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+    cursor: pointer;
+    margin-bottom: 45px;
+}
+
+.color-block:hover {
+    transform: scale(1.1); /* Hace que el bloque crezca cuando pasa el ratón por encima */
+}
+
+/* Pie de página */
+.footer {
+    padding: 50px 0;
+    background-color: #2A223A;
+    color: #ffffff;
+    font-size: 18px;
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    font-size: 1.2rem;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    margin-top: auto; /* Hace que el footer se quede abajo */
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 0 50px;
+}
+
+.footer-section {
+    width: 30%;
+}
+
+.footer-section h5 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: #FF5A2C;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: #FF5A2C;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 16px;
+    color: #E0E0E0;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+/* Íconos de redes sociales */
+.social-icons {
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    justify-content: flex-start;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.social-icons li a {
+    color: #ffffff;
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+.social-icons li a:hover {
+    color: #FF5A2C;
+}
+
+@media (max-width: 768px) {
+    .colores {
+        grid-template-columns: repeat(2, 1fr); /* 2 columnas en tabletas */
+    }
+}
+
+@media (max-width: 480px) {
+    .colores {
+        grid-template-columns: 1fr; /* 1 columna en teléfonos */
+    }
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 36px;
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 28px;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu .navbar ul li a {
+        font-size: 18px; /* Reduce el tamaño de fuente en dispositivos pequeños */
+        padding: 5px;
+    }
+
+    .menu-toggle i {
+        font-size: 24px; /* Ajusta el ícono del menú */
+    }
+}
+@media (max-width: 768px) {
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-section {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .footer-section h5 {
+        font-size: 18px;
+    }
+
+    .footer-section ul li {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 0 20px; /* Reduce el padding lateral */
+    }
+}
+
+@media (max-width: 480px) {
+    img {
+        max-width: 100%; /* Asegura que las imágenes no excedan el ancho */
+    }
+}
+
+@media (max-width: 768px) {
+    .contenedor {
+        margin-top: 150px; /* Ajusta el espacio superior */
+        padding: 0 10px;
+    }
+}

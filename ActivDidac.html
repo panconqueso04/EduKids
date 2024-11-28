@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ActividadesDidactica</title>
+    <link rel="stylesheet" href="style_dida.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Menu -->
+    <div class="menu container">
+        <a href="index.html" class="logo">
+            <img src="Img/logo.svg" alt="Logo de la página">
+        </a>
+        <nav class="navbar">
+            <ul> 
+                <li> <a href="index.html"> Inicio </a></li>
+                <li> <a href="RinconDivertido.html"> Rincón Divertido </a></li>
+                <li> <a href="ActivDidac.html"> Actividades Didácticas  </a></li>
+                <li> <a href="ApreJug.html">  ¡A Jugar!  </a></li>
+                <li> <a href="AcercaDe.html"> Acerca de  </a></li>
+            </ul>
+        </nav>
+    </div>    
+
+        <!-- Contenedor principal -->
+        <div class="container main-content">
+            <h1><img src="Img-Dida/Icon.svg" alt="Icono Actividades" class="icono">¡Hola, pequeños exploradores! </h1>
+            <p>Están a punto de embarcarse en una emocionante aventura. Cada uno de ustedes tiene misiones especiales, <br>
+                diseñadas según su edad. ¡Sigan las pistas, resuelvan los desafíos y descubran el mundo mientras se <br>
+                divierten y aprenden! ¿Están listos para la aventura?</p>
+
+            <div class="grid-container">
+                <a href="Edad0-1.html" class="grid-item">
+                    <img src="Img-Dida/Edad0-1.svg" alt="Edad0-1">
+                    <div class="content"></div>
+                </a>
+                <a href="Edad2-3.html" class="grid-item">
+                    <img src="Img-Dida/Edad2-3.svg" alt="Edad2-3">
+                    <div class="content"></div>
+                </a>
+                <a href="Edad4-5.html" class="grid-item">
+                    <img src="Img-Dida/Edad4-5.svg" alt="Edad4-5">
+                    <div class="content"></div>
+                </a>
+                <a href="Especial.html" class="grid-item edad3" onclick="mostrarModal(event)">
+                    <img src="Img-Dida/Especial.svg" alt="Especial">
+                    <div class="content"></div>
+                </a>
+            </div>
+        </div>    
+
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <p>¡Hola! 😊 Este contenido está especialmente diseñado para personas neurodivergentes, quienes piensan, aprenden y experimentan el mundo de formas únicas. Nuestro objetivo es ofrecer un espacio acogedor y adaptado a sus necesidades.</p>
+            <br>
+            <p>¿Te gustaría conocer más?</p> <br>
+            <button onclick="aceptar()">Sí, quiero conocer!</button>
+            <button onclick="cancelar()">Cancelar</button>
+        </div>
+    </div>
+
+        <!-- Pie de página -->
+        <footer class="footer">
+            <div class="footer-content container">
+                <!-- Sección de navegación -->
+                <div class="footer-section">
+                    <h5>Información</h5>
+                    <ul>
+                        <li><a href="AcercaDe.html">Acerca de nosotros</a></li>
+                        <li><a href="TerminosCondiciones.html">Términos y Condiciones</a></li>
+                        <li><a href="PoliticaPrivacidad.html">Política de Privacidad</a></li>
+                        <!--<li><a href="#">FAQs</a></li>-->
+                    </ul>
+                </div>
+        
+                <!-- Sección de recursos -->
+                <div class="footer-section">
+                    <h5>Recursos</h5>
+                    <ul>
+                        <li><a href="ActivDidac.html">Materiales Didácticos</a></li>
+                        <li><a href="index.html">Guías</a></li>
+                        <li><a href="AcercaDe.html">Contacto</a></li>
+                    </ul>
+                </div>
+        
+                <!-- Sección de redes sociales -->
+                <div class="footer-section">
+                    <h5>Conéctate con nosotros</h5>
+                    <ul class="social-icons">
+                        <li><a href="https://www.facebook.com/profile.php?id=61565597855845" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="https://www.instagram.com/edukids546/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="https://x.com/Manzanita6432" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="www.linkedin.com/in/amparito-maximiliano-rodriguez" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Mi Pagina. Todos los derechos reservados.</p>
+            </div>
+        </footer>
+    
+
+        <script src="Especial.js"></script>
+</body>
+</html>

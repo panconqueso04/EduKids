@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Adivinanzas</title>
+    <link rel="stylesheet" href="styles_adivinanzas.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+        <!-- Menú -->
+    <div class="menu container">
+        <a href="index.html" class="logo">
+            <img src="Img/logo.svg" alt="Logo de la página">
+        </a>
+        <nav class="navbar">
+            <ul> 
+                <li> <a href="index.html"> Inicio </a></li>
+                <li> <a href="RinconDivertido.html"> Rincón Divertido </a></li>
+                <li> <a href="ActivDidac.html"> Actividades Didácticas  </a></li>
+                <li> <a href="ApreJug.html">  ¡A Jugar!  </a></li>
+                <li> <a href="AcercaDe.html"> Acerca de  </a></li>
+            </ul>
+        </nav>
+    </div>  
+
+    <div class="intro">
+        <img src="Adivinanza/Icono.svg" alt="Icono de adivinanzas">
+        <div class="texto-intro">
+            <h1>Adivinanzas cortas y fáciles para niños</h1>
+            <p>¡Adivina, adivinador!<br>
+            Los acertijos o adivinanzas para niños son actividades ideales para ejercitar la mente de tus hijos o alumnos. 
+            Nuestras adivinanzas con respuesta incluyen diversos niveles de complejidad. Sin embargo, todas ellas son cortas, 
+            fáciles de leer y comprender. Así que, ya sea en casa o en el salón de clases, motiva a tus niños a divertirse mientras 
+            desarrollan sus habilidades de pensamiento y lógica.</p>
+        </div>
+    </div>
+
+    <div class="contenedor">
+        <!-- Video de bienvenida -->
+        <div class="video-container">
+            <video id="videoBienvenida" width="100%" controls>
+                <source src="Adivinanza/Adivinanzas.mp4" type="video/mp4">
+                Tu navegador no soporta la reproducción de video.
+            </video>
+        </div>
+        
+        <!-- Botón para explorar la adivinanza -->
+        <button class="button" onclick="mostrarOpciones()">Explorar Adivinanza</button>
+    </div>
+
+<!-- Ventana para mostrar opciones -->
+<div id="modal" class="modal">
+    <div class="modal-content">
+        <!-- Botón para cerrar el modal -->
+        <span class="close" onclick="cerrarModal()">&times;</span>
+        
+        <!-- Contenido dinámico -->
+        <h3 id="adivinanzaTexto"></h3>
+        <img id="imagenPregunta" class="imagen-pregunta" src="" alt="Imagen de la pregunta" />
+        <div id="opciones"></div>
+        <p id="resultado" class="resultado"></p>
+        
+        <!-- Navegación -->
+        <div class="navegacion">
+            <i class="fas fa-arrow-right flecha" onclick="siguienteAdivinanza()"></i>
+        </div>
+    </div>
+</div>
+
+    <!-- Sonidos -->
+    <audio id="sonidoCorrecto" src="Adivinanza/Correcto.mp3"></audio>
+    <audio id="sonidoIncorrecto" src="Adivinanza/Perdida.mp3"></audio>
+
+
+    
+        <!-- Pie de página -->
+        <footer class="footer">
+            <div class="footer-content container">
+                <!-- Sección de navegación -->
+                <div class="footer-section">
+                    <h5>Información</h5>
+                    <ul>
+                        <li><a href="AcercaDe.html">Acerca de nosotros</a></li>
+                        <li><a href="TerminosCondiciones.html">Términos y Condiciones</a></li>
+                        <li><a href="PoliticaPrivacidad.html">Política de Privacidad</a></li>
+                        <!--<li><a href="#">FAQs</a></li>-->
+                    </ul>
+                </div>
+        
+                <!-- Sección de recursos -->
+                <div class="footer-section">
+                    <h5>Recursos</h5>
+                    <ul>
+                        <li><a href="ActivDidac.html">Materiales Didácticos</a></li>
+                        <li><a href="index.html">Guías</a></li>
+                        <li><a href="AcercaDe.html">Contacto</a></li>
+                    </ul>
+                </div>
+        
+                <!-- Sección de redes sociales -->
+                <div class="footer-section">
+                    <h5>Conéctate con nosotros</h5>
+                    <ul class="social-icons">
+                        <li><a href="https://www.facebook.com/profile.php?id=61565597855845" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="https://www.instagram.com/edukids546/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="https://x.com/Manzanita6432" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="www.linkedin.com/in/amparito-maximiliano-rodriguez" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Mi Pagina. Todos los derechos reservados.</p>
+            </div>
+        </footer>
+    
+        <script src ="adivinanzas.js"></script>
+</body>
+</html>

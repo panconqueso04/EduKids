@@ -1,0 +1,302 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Spicy+Rice&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    font-family: "Lilita One", sans-serif;
+    background-color: #fff8ec;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+img {
+    max-width: 100%;
+}
+
+.container {
+    max-width: 100%; /* Make the container full-width */
+    margin: 0 auto;
+    padding: 0 50px;
+}
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Menú llamativo */
+.menu {
+    background-color: rgba(255, 255, 255, 0.9); /* Ligera transparencia */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    padding: 15px 50px; /* Ajusta el padding para espaciar mejor el contenido */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+
+.logo img {
+    max-width: 150px;
+    object-fit:contain;
+}
+
+.menu .navbar ul li {
+    position: relative;
+    float: left;
+}
+
+.menu .navbar ul li a {
+    font-size: 34px; /* Ajusta el tamaño de la fuente si es muy grande */
+    color: #0f165ae8;
+    padding: 10px 20px; /* Reduce el espaciado para compactar el menú */
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.menu .navbar ul {
+    display: flex;
+    gap: 20px;
+}
+
+.menu .navbar ul li a:hover {
+    background-color: #ffc83c;
+    color: #fff;
+}
+
+#menu {
+    display: none;
+}
+
+.menu-icono {
+    width: 25px;
+    height: 25px;
+    display: block;
+}
+
+.menu label {
+    cursor: pointer;
+    display: none;
+}
+
+/* Estilos Generales */
+.container.main-content {
+    padding: 20px;
+    margin-top: 220px;
+}
+
+main {
+    text-align: center;
+}
+
+main h1 {
+    font-size: 45px;
+    color: #07640e;
+    margin-bottom: 20px;
+}
+
+main p {
+    font-size: 34px;
+    color: #555;
+    margin-bottom: 40px;
+}
+
+.icono {
+    width: 150px;
+    height: auto;
+    margin-right: 10px;
+    margin-left: -20px;
+    vertical-align: middle;
+}
+
+/* Sección de Actividades */
+.grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Diseño adaptable */
+    gap: 20px;
+    justify-items: center;
+    padding: 0 20px;
+    margin-left: 25px;
+}
+
+/* Si quieres que el color gris se mantenga cuando el usuario pasa el ratón por encima */
+.navbar ul li:nth-child(4) a:hover {
+    color: #555;  /* Gris más oscuro para el hover */
+}
+
+.grid-item {
+    background-color: #f0f9f8;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+    text-align: center;
+    border: 4px solid #caeeeb;
+    max-width: 400px;
+    margin: 10px;
+}
+
+.grid-item img {
+    width: 80%;
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+.grid-item p {
+    font-size: 1.2em;
+    color: #444;
+}
+
+/* Efecto Hover */
+.grid-item:hover {
+    transform: translateY(-20px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+    border-color: #fff;
+}
+
+
+/* Medios Responsivos */
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .card {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    .card img {
+        width: 80px;
+        height: 80px;
+    }
+
+    .card {
+        padding: 15px;
+    }
+}
+
+/* Medios Responsivos */
+@media (max-width: 1024px) {
+    .grid-container {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /* Reduce el tamaño mínimo de las columnas */
+        gap: 15px; /* Menor espacio entre los elementos */
+        padding: 10px; /* Ajuste de padding general */
+    }
+
+    .grid-item {
+        max-width: 95%; /* Ajusta el ancho máximo para que quepa mejor */
+        padding: 15px;
+    }
+
+    .menu {
+        padding: 10px 30px; /* Reduce el padding en el menú */
+    }
+
+    .menu .navbar ul {
+        gap: 15px; /* Espaciado menor entre enlaces */
+    }
+
+    .menu .navbar ul li a {
+        font-size: 28px; /* Ajusta el tamaño del texto del menú */
+    }
+
+    main h1 {
+        font-size: 36px; /* Ajusta el tamaño del encabezado principal */
+    }
+
+    main p {
+        font-size: 24px; /* Ajusta el tamaño del texto */
+    }
+}
+
+@media (max-width: 768px) {
+    .menu {
+        flex-direction: column; /* Apila el contenido del menú verticalmente */
+        padding: 8px 20px; /* Reduce el padding */
+    }
+
+    .menu .navbar ul {
+        flex-direction: column; /* Coloca los elementos del menú en una columna */
+        gap: 10px; /* Menor espacio entre enlaces */
+    }
+
+    .menu .navbar ul li a {
+        font-size: 24px;
+        text-align: center;
+        padding: 8px 12px; /* Ajusta el espacio interior */
+    }
+
+    .grid-container {
+        grid-template-columns: 1fr; /* Una sola columna */
+        gap: 10px; /* Reduce el espacio entre tarjetas */
+    }
+
+    main h1 {
+        font-size: 28px; /* Ajuste del encabezado */
+    }
+
+    main p {
+        font-size: 20px; /* Ajuste del texto */
+    }
+
+    .logo img {
+        max-width: 120px; /* Ajusta el tamaño del logo */
+    }
+}
+
+@media (max-width: 480px) {
+    .menu {
+        padding: 6px 10px; /* Ajuste adicional para dispositivos pequeños */
+    }
+
+    .menu .navbar ul li a {
+        font-size: 20px;
+        padding: 6px 8px; /* Menor espaciado interior */
+    }
+
+    .grid-item {
+        padding: 10px;
+    }
+
+    .grid-item img {
+        width: 90%;
+    }
+
+    main h1 {
+        font-size: 22px; /* Encabezado más pequeño */
+    }
+
+    main p {
+        font-size: 16px;
+    }
+
+    .logo img {
+        max-width: 100px;
+    }
+}
+
+/* Ajuste General */
+.grid-container {
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Diseño fluido */
+    gap: 20px;
+}

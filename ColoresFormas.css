@@ -1,0 +1,302 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Spicy+Rice&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    font-family: "Lilita One", sans-serif;
+    background-color: #fff8ec;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100%;
+    padding-bottom: 120px;
+}
+
+img {
+    max-width: 100%;
+}
+
+.container {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 50px;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Menú llamativo */
+.menu {
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+.logo img {
+    max-width: 150px;
+    object-fit: contain;
+}
+
+.menu .navbar ul li {
+    position: relative;
+    float: left;
+}
+
+.menu .navbar ul li a {
+    font-size: 34px;
+    color: #0f165ae8;
+    padding: 10px 20px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.menu .navbar ul {
+    display: flex;
+    gap: 20px;
+}
+
+.menu .navbar ul li a:hover {
+    background-color: #ffc83c;
+    color: #fff;
+}
+
+/* Menú hamburguesa */
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 30px;
+    height: 25px;
+    z-index: 1000;
+}
+
+.menu-toggle i {
+    font-size: 30px;
+    color: #0f165ae8;
+}
+
+/* Responsive: cuando la pantalla sea pequeña */
+@media (max-width: 768px) {
+    /* Ocultamos los enlaces del menú en pantallas pequeñas por defecto */
+    .navbar ul {
+        display: none;
+        width: 100%;
+        text-align: center;
+        flex-direction: column;
+    }
+
+    /* Hacemos visible el ícono de menú hamburguesa */
+    .menu-toggle {
+        display: flex;
+    }
+
+    /* Estilos para el menú cuando está visible */
+    .navbar ul.show {
+        display: block;
+        width: 100%;
+        background-color: #fff;
+        position: absolute;
+        top: 70px;
+        left: 0;
+        right: 0;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .navbar ul li {
+        display: block;
+        padding: 10px 0;
+    }
+
+    .navbar ul li a {
+        font-size: 24px;
+        padding: 10px;
+    }
+}
+
+/* Ajustes en la disposición de los contenidos */
+@media (max-width: 768px) {
+    .intro {
+        flex-direction: column;
+        align-items: center;
+        margin-top: 100px;
+    }
+
+    .intro img {
+        width: 150px;
+        margin-bottom: 20px;
+        transform: translateX(0);
+    }
+
+    .card-container {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 0 30px;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .footer-section {
+        width: 100%;
+        margin-bottom: 30px;
+    }
+
+    .footer-bottom {
+        font-size: 14px;
+        margin-top: 20px;
+    }
+}
+
+/* Sección de formas */
+.shapes {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; /* Asegura que las formas se acomoden bien en pantallas pequeñas */
+    margin-top: 180px;
+    margin-bottom: 100px;
+}
+
+/* Si quieres que el color gris se mantenga cuando el usuario pasa el ratón por encima */
+.navbar ul li:nth-child(4) a:hover {
+    color: #555;  /* Gris más oscuro para el hover */
+}
+
+.shape {
+    width: 150px;
+    height: 150px;
+    margin: 15px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+    border-radius: 10px;
+}
+
+.shape:hover {
+    transform: scale(1.1);
+}
+
+#circle {
+    background-color: #e74c3c;
+    border-radius: 50%;
+}
+
+#square {
+    background-color: #3498db;
+    border: 3px solid #2980b9;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+#triangle {
+    width: 0;
+    height: 0;
+    border-left: 100px solid transparent; 
+    border-right: 100px solid transparent; 
+    border-bottom: 200px solid #2ecc71; 
+}
+
+/* Pie de página */
+.footer {
+    padding: 50px 0;
+    background-color: #2A223A;
+    color: #ffffff;
+    font-size: 18px;
+    position: relative;
+    width: 100%;
+    padding: 20px;
+    font-size: 1.2rem;
+    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    margin-top: auto;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 0 50px;
+}
+
+.footer-section {
+    width: 30%;
+}
+
+.footer-section h5 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: #FF5A2C;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: #FF5A2C;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 16px;
+    color: #E0E0E0;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+/* Íconos de redes sociales */
+.social-icons {
+    display: flex;
+    gap: 20px;
+    padding: 0;
+    justify-content: flex-start;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+.social-icons li a {
+    color: #ffffff;
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+.social-icons li a:hover {
+    color: #FF5A2C;
+}

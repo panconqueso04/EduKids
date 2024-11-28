@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canciones Infantiles</title>
+    <link rel="stylesheet" href="cancion.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Menú -->
+    <header class="menu container">
+        <a href="index.html" class="logo">
+            <img src="Img/logo.svg" alt="Logo de la página">
+        </a>
+        <nav class="navbar">
+            <ul> 
+                <li> <a href="index.html"> Inicio </a></li>
+                <li> <a href="RinconDivertido.html"> Rincón Divertido </a></li>
+                <li> <a href="ActivDidac.html"> Actividades Didácticas  </a></li>
+                <li> <a href="ApreJug.html">  ¡A Jugar!  </a></li>
+                <li> <a href="AcercaDe.html"> Acerca de  </a></li>
+            </ul>
+        </nav>
+    </header> 
+    
+
+
+    <div class="contenido">
+        <!-- Lista de Canciones -->
+        <aside class="song-list" style="width: 500px;">
+            <h3>Lista de Canciones</h3>
+            <ul>
+                <li onclick="showSong('cancion1')">Canción 1: Plim Plam, A Saltar En El Lodo!</li>
+                <li onclick="showSong('cancion2')">Canción 2: Abejita Chiquitita</li>
+                <li onclick="showSong('cancion3')">Canción 3: Los Insectos Son Chiquitos</li>
+            </ul>
+        </aside>
+    
+        <!-- Contenedor Anaranjado -->
+        <div class="orange-container" id="orangeContainer">
+            <div class="rotating-disc"></div>
+        </div>
+    
+        <!-- Contenido de la Canción -->
+        <div id="songContent" class="song-content">
+            <!-- Aquí se mostrará el video y la letra -->
+            <section class="video-lyrics" id="cancion1" style="display: none;">
+                <h3>Plim Plam, A Saltar En El Lodo!</h3>
+                <br>
+                <video controls>
+                    <source src="Video-Cancion/Plim Plam, A Saltar En El Lodo! ❤️ Canciones Infantiles _ Plim Plim.mp4" type="video/mp4">
+                </video>
+                <br>
+                <p><b>Letra de A Saltar en el lodo</b></p>
+            
+                <div class="lyrics-container">
+                    <div class="lyrics-column">
+                        <p>La lluvia se fue<br>
+                        Charcos veo aparecer<br>
+                        ¿Quieres venir a jugar?<br>
+                        Hoy nos vamos a ensuciar</p>
+                        <p>Plim, plam, a saltar<br>
+                        Sobre charcos chapotear<br>
+                        En el lodo saltaré<br>
+                        Ay, qué divertido es...</p>
+                        <p>Iu-ju, aquí voy<br>
+                        En el lodo juego yo<br>
+                        Ven, te vas a divertir<br>
+                        Ven, juguemos, sí, sí, sí</p>
+                        <p>Plim, plam, a saltar<br>
+                        Sobre charcos chapotear<br>
+                        En el lodo saltaré<br>
+                        Ay, qué divertido es...</p>
+                    </div>
+                    <div class="lyrics-column">
+                        <p>Un, dos, un, dos, tres<br>
+                        Vamos a hacer un pastel<br>
+                        Mucho lodo hay que usar<br>
+                        Y lo puedes decorar</p>
+                        <p>Plim, plam, a saltar<br>
+                        Sobre charcos chapotear<br>
+                        En el lodo saltaré<br>
+                        Ay, qué divertido es...</p>
+                        <p>Mi-ren! Casi está<br>
+                        Un muñeco especial<br>
+                        Qué gracioso que se ve<br>
+                        Nuestro nuevo amigo es...</p>
+                        <p>Plim, plam, a saltar<br>
+                        Sobre charcos chapotear<br>
+                        En el lodo saltaré<br>
+                        Ay, qué divertido es...</p>
+                    </div>
+                </div>
+            </section>
+
+                  <!-- Aquí se mostrará el video y la letra de Abejita Chiquitita -->
+            <section class="video-lyrics" id="cancion2" style="display: none;">
+                <h3>Abejita Chiquitita</h3>
+                <br>
+                <video controls>
+                    <source src="Video-Cancion/Abejita Chiquitita ♫ Canciones Infantiles ♫ Plim Plim.mp4" type="video/mp4">
+                </video>
+                <br>
+                <p><b>Letra de Abejita Chiquitita</b></p>
+            
+                <div class="lyrics-container">
+                    <div class="lyrics-column">
+                        <p>Abejita chiquitita
+                            Abejita chiquitita
+                            Abejita dime dónde estás
+                            Estoy aquí, en una flor
+                            Haciendo mi trabajo con amor
+                            Estoy aquí, en una flor
+                            Haciendo polinización</p>
+                    </div>
+                    <div class="lyrics-column">
+                        <p>Hay muchas flores en este jardín
+                            En cual estas me pregunta Plim Plim
+                            Hay muchas flores en este jardín
+                            En cuál estas me pregunta Plim Plim</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Aquí se mostrará el video y la letra -->
+            <section class="video-lyrics" id="cancion3" style="display: none;">
+                <h3>Plim Plam, A Saltar En El Lodo!</h3>
+                <br>
+                <video controls>
+                    <source src="Video-Cancion/Los Insectos Son Chiquitos 🐞 Canciones Infantiles _ Plim Plim.mp4" type="video/mp4">
+                </video>
+                <br>
+                <p><b>Letra de A Saltar en el lodo</b></p>
+            
+                <div class="lyrics-container">
+                    <div class="lyrics-column">
+                        <p>Los insectos 
+                            Son chiquitos
+                            Chiquiti...
+                            Chiquiti...
+                            ¡Chiquititos! <br></p>
+                            <p> Los insectos 
+                            Son chiquitos
+                                Chiquiti...
+                                Chiquiti...
+                                ¡Chiquititos! <br> </p>
+                            <p>Ocho patas 
+                                Tienen las arañas
+                                Trepan, trepan 
+                                Por su telaraña  <br></p>
+                            <p>Las hormigas 
+                                Hacen caminitos
+                                Van marchando
+                                Por los arbolitos <br> </p>
+                            <p>Los insectos 
+                                Son chiquitos
+                                Chiquiti...
+                                Chiquiti...
+                                ¡Chiquititos! <br> </p>
+                            <p> Los insectos 
+                                Son chiquitos
+                                Chiquiti...
+                                Chiquiti...
+                                ¡Chiquititos! <br></p>
+                            
+                        </p>
+                    </div>
+                    <div class="lyrics-column">
+                        <p>
+                            Caminando va el ciempiés
+                            Cien pasitos a la vez
+                            La luciérnaga, su amiga,
+                            El camino le ilumina <br> </p>
+
+                            <p> Los insectos 
+                                Son chiquitos
+                                Chiquiti...
+                                Chiquiti...
+                                ¡Chiquititos!<br></p> 
+                            
+                                <p> Los insectos 
+                                    Son chiquitos
+                                    Chiquiti...
+                                    Chiquiti...
+                                    ¡Chiquititos!<br></p> 
+                                
+                            
+                            <p>La araña… 
+                                La hormiga… 
+                                El ciempiés… 
+                                ¡Y la luciérnaga!
+                                ¡Qué chiquitos y qué bonitos son! <br> </p>
+                            
+                            <p> Los insectos 
+                                Son chiquitos
+                                Chiquiti...
+                                Chiquiti...
+                                ¡Chiquititos!<br></p> 
+                        
+                                <p> Los insectos 
+                                    Son chiquitos
+                                    Chiquiti...
+                                    Chiquiti...
+                                    ¡Chiquititos!<br></p> 
+                                
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+           
+
+        <!-- Pie de página -->
+        <footer class="footer">
+            <div class="footer-content container">
+                <!-- Sección de navegación -->
+                <div class="footer-section">
+                    <h5>Información</h5>
+                    <ul>
+                        <li><a href="AcercaDe.html">Acerca de nosotros</a></li>
+                        <li><a href="TerminosCondiciones.html">Términos y Condiciones</a></li>
+                        <li><a href="PoliticaPrivacidad.html">Política de Privacidad</a></li>
+                        <!--<li><a href="#">FAQs</a></li>-->
+                    </ul>
+                </div>
+        
+                <!-- Sección de recursos -->
+                <div class="footer-section">
+                    <h5>Recursos</h5>
+                    <ul>
+                        <li><a href="ActivDidac.html">Materiales Didácticos</a></li>
+                        <li><a href="index.html">Guías</a></li>
+                        <li><a href="AcercaDe.html">Contacto</a></li>
+                    </ul>
+                </div>
+        
+                <!-- Sección de redes sociales -->
+                <div class="footer-section">
+                    <h5>Conéctate con nosotros</h5>
+                    <ul class="social-icons">
+                        <li><a href="https://www.facebook.com/profile.php?id=61565597855845" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="https://www.instagram.com/edukids546/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="https://x.com/Manzanita6432" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="www.linkedin.com/in/amparito-maximiliano-rodriguez" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Mi Pagina. Todos los derechos reservados.</p>
+            </div>
+        </footer>
+    
+    
+
+    <script src="song.js"> </script>
+</body>
+</html>

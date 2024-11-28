@@ -1,0 +1,385 @@
+@import url('https://fonts.googleapis.com/css2?family=Lilita+One&family=Spicy+Rice&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,100..700;1,100..700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    font-family: "Lilita One", sans-serif;
+    background-color: #fff8ec;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+img {
+    max-width: 100%;
+}
+
+.container {
+    max-width: 100%; /* Make the container full-width */
+    margin: 0 auto;
+    padding: 0 50px;
+}
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Menú llamativo */
+.menu {
+    background-color: rgba(255, 255, 255, 0.9); /* Ligera transparencia */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+    padding: 15px 50px; /* Ajusta el padding para espaciar mejor el contenido */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+}
+
+
+.logo img {
+    max-width: 150px;
+    object-fit:contain;
+}
+
+.menu .navbar ul li {
+    position: relative;
+    float: left;
+}
+
+.menu .navbar ul li a {
+    font-size: 34px; /* Ajusta el tamaño de la fuente si es muy grande */
+    color: #0f165ae8;
+    padding: 10px 20px; /* Reduce el espaciado para compactar el menú */
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.menu .navbar ul {
+    display: flex;
+    gap: 20px;
+}
+
+.menu .navbar ul li a:hover {
+    background-color: #ffc83c;
+    color: #fff;
+}
+
+#menu {
+    display: none;
+}
+
+
+
+.menu label {
+    cursor: pointer;
+    display: none;
+}
+
+
+/* Estilos para el h1 */
+h1 {
+    color: #2c3e50;
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 30px;
+    font-family: "Roboto Mono", serif;
+    animation: fadeIn 1.5s ease;
+}
+
+/* Animación para el h1 */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Estilos para los h2 y p */
+h2, p {
+    margin-top: 30px;
+    padding-left: 80px;
+    font-family: "Roboto Mono", serif;
+    animation: slideIn 1.5s ease;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.language-selector {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-top: 300px;
+    padding-left: 150px;
+}
+
+
+/* Si quieres que el color gris se mantenga cuando el usuario pasa el ratón por encima */
+.navbar ul li:nth-child(4) a:hover {
+    color: #555;  /* Gris más oscuro para el hover */
+}
+.language-selector a {
+    text-decoration: none;
+    font-family: "Roboto Mono", sans-serif;
+    color: #2c3e50;
+    font-size: 14px;
+}
+
+.flag {
+    width: 24px;
+    height: 16px;
+    margin-right: 5px;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.flag:hover {
+    transform: scale(1.1);
+}
+
+/* Ajusta la apariencia según el idioma seleccionado */
+.selected {
+    border: 2px solid #FF5A2C;
+    border-radius: 5px;
+}
+
+
+/* Footer*/ 
+.footer {
+    padding: 50px 0;
+    background-color: #2A223A;
+    color: #ffffff;
+    font-size: 18px;
+    margin-top: 50px;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 0 50px;
+}
+
+.footer-section {
+    width: 30%;
+}
+
+.footer-section h5 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: #FF5A2C;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+    color: #FF5A2C;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 16px;
+    color: #E0E0E0;
+}
+
+.footer-bottom p {
+    margin: 0;
+}
+
+/* Estilos para los íconos de redes sociales */
+.social-icons {
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    padding: 0;
+    justify-content: flex-start; /* Cambié a flex-start para alinearlos a la izquierda */
+    margin-top: 20px; /* Ajusta el margen superior para moverlos hacia abajo */
+    margin-left: 20px; /* Ajusta el margen izquierdo para moverlos a la izquierda */
+}
+
+.social-icons li a {
+    color: #ffffff;
+    font-size: 24px;
+    transition: color 0.3s ease;
+}
+
+.social-icons li a:hover {
+    color: #FF5A2C; /* Cambia de color al pasar el mouse */
+}
+
+/* Estilos Responsivos */
+@media (max-width: 1024px) {
+    .menu {
+        padding: 10px 30px; /* Reduce el padding para dispositivos más pequeños */
+    }
+
+    .menu .navbar ul {
+        gap: 15px; /* Reduce el espacio entre los elementos del menú */
+    }
+
+    .menu .navbar ul li a {
+        font-size: 28px; /* Ajusta el tamaño del texto del menú */
+        padding: 8px 16px;
+    }
+
+    h1 {
+        font-size: 36px; /* Reduce el tamaño del encabezado principal */
+    }
+
+    h2, p {
+        font-size: 20px; /* Reduce el tamaño de los textos secundarios */
+        padding-left: 40px; /* Ajusta el margen izquierdo */
+    }
+
+    .language-selector {
+        flex-wrap: wrap; /* Permite que los elementos del selector de idioma se ajusten */
+        padding-left: 50px;
+    }
+
+    .footer-content {
+        flex-wrap: wrap; /* Permite que las secciones del footer se apilen si es necesario */
+        justify-content: center; /* Centra las secciones en dispositivos más pequeños */
+    }
+
+    .footer-section {
+        width: 80%; /* Ocupa todo el ancho disponible */
+        margin-bottom: 20px; /* Espacio entre secciones */
+    }
+
+    .social-icons {
+        justify-content: center; /* Centra los íconos sociales */
+        margin: 0 auto; /* Centra el contenedor de íconos */
+    }
+}
+
+@media (max-width: 768px) {
+    .menu {
+        flex-direction: column; /* Apila los elementos del menú verticalmente */
+        padding: 8px 20px;
+    }
+
+    .menu .navbar ul {
+        flex-direction: column; /* Cambia a disposición vertical */
+        align-items: flex-start; /* Alinea los enlaces a la izquierda */
+    }
+
+    .menu .navbar ul li a {
+        font-size: 24px;
+        padding: 8px 10px;
+        text-align: left; /* Alinea el texto a la izquierda */
+    }
+
+    h1 {
+        font-size: 28px; /* Tamaño más pequeño para pantallas medianas */
+        margin-bottom: 20px;
+    }
+
+    h2, p {
+        font-size: 18px;
+        padding-left: 20px;
+    }
+
+    .language-selector {
+        padding-left: 20px; /* Reduce el padding */
+        gap: 5px; /* Menor espacio entre los elementos */
+    }
+
+    .footer-content {
+        padding: 0 20px;
+        flex-direction: column; /* Apila las secciones del footer */
+    }
+
+    .footer-section {
+        width: 100%; /* Ocupa todo el ancho */
+    }
+
+    .social-icons {
+        justify-content: center;
+        gap: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .menu {
+        padding: 6px 10px; /* Reduce aún más el padding */
+    }
+
+    .menu .navbar ul li a {
+        font-size: 20px; /* Tamaño más pequeño para dispositivos pequeños */
+        padding: 6px 8px;
+    }
+
+    h1 {
+        font-size: 22px; /* Reduce el encabezado principal */
+        margin-bottom: 15px;
+    }
+
+    h2, p {
+        font-size: 16px;
+        padding-left: 10px;
+    }
+
+    .language-selector {
+        flex-direction: column; /* Apila los idiomas verticalmente */
+        padding-left: 10px;
+        align-items: flex-start;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .footer-section {
+        width: 100%;
+        text-align: center; /* Centra el texto */
+    }
+
+    .social-icons {
+        gap: 10px; /* Menor espacio entre íconos */
+        margin-top: 15px;
+    }
+}

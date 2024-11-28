@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cuentos Infantiles</title>
+    <link rel="stylesheet" href="cuento.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Menú -->
+    <header class="menu container">
+        <a href="index.html" class="logo">
+            <img src="Img/logo.svg" alt="Logo de la página">
+        </a>
+        <nav class="navbar">
+            <ul> 
+                <li> <a href="index.html"> Inicio </a></li>
+                <li> <a href="RinconDivertido.html"> Rincón Divertido </a></li>
+                <li> <a href="ActivDidac.html"> Actividades Didácticas  </a></li>
+                <li> <a href="ApreJug.html">  ¡A Jugar!  </a></li>
+                <li> <a href="AcercaDe.html"> Acerca de  </a></li>
+            </ul>
+        </nav>
+    </header>    
+    
+    <!-- Contenedor principal -->
+    <div class="intro">
+        <img src="Video-Cuentos/Icono.svg" alt="Imagen de Cuento">
+        <div class="text-container">
+            <h1 class="titulo-principal">Cuentos Infantiles</h1>
+            <p class="subtitulo-principal">Selecciona un cuento de la lista para verlo aquí.</p>
+        </div>
+    </div>
+      
+    <div class="card-container">
+        <a href="CuentosClasicos.html">
+            <div class="card">
+                <img src="Video-Cuentos/Cuentos.clasicos.svg" alt="Cuentos clásicos">
+                <p>Cuentos clásicos</p>
+            </div>
+        </a>
+        <!-- <a href="CuentosDormir.html">
+            <div class="card">
+                <img src="Video-Cuentos/Cuentos.dormir.svg" alt="Cuentos para dormir">
+                <p>Cuentos para dormir</p>
+            </div>
+        </a>
+        <a href="Fabulas.html">
+            <div class="card">
+                <img src="Video-Cuentos/Fabulas.svg" alt="Fábulas para niños">
+                <p>Fábulas para niños</p>
+            </div>
+        </a>-->
+        <a href="CuentosInventados.html">
+            <div class="card">
+                <img src="Video-Cuentos/Cuentos.inventados.svg" alt="Cuentos Inventados">
+                <p>Cuentos Inventados</p>
+            </div>
+        </a>
+        <!-- <a href="CuentoAnimales.html">
+            <div class="card">
+                <img src="Video-Cuentos/Cuentos.animales.svg" alt="Cuento de Animales">
+                <p>Cuento de Animales</p>
+            </div>
+        </a>
+        <a href="CuentosDormir.html">
+            <div class="card">
+                <img src="Video-Cuentos/Cuentos.princesas.svg" alt="Cuentos de Princesas">
+                <p>Cuentos de Princesas</p>
+            </div>
+        </a>
+        <a href="PoemasNiños.html">
+            <div class="card">
+                <img src="Video-Cuentos/Poema.Niños.svg" alt="Poemas para niños">
+                <p>Poemas para niños</p>
+            </div>
+        </a>    
+        <a href="CuentoExploradores.html">
+            <div class="card">
+                <img src="Video-Cuentos/Cuentos.exploradores.svg" alt="Cuento Exploradores">
+                <p>Cuentos de Exploradores</p>
+            </div>
+        </a> -->
+
+    </div>
+    
+    
+        <!-- Pie de página -->
+        <footer class="footer">
+            <div class="footer-content container">
+                <!-- Sección de navegación -->
+                <div class="footer-section">
+                    <h5>Información</h5>
+                    <ul>
+                        <li><a href="AcercaDe.html">Acerca de nosotros</a></li>
+                        <li><a href="TerminosCondiciones.html">Términos y Condiciones</a></li>
+                        <li><a href="PoliticaPrivacidad.html">Política de Privacidad</a></li>
+                        <!--<li><a href="#">FAQs</a></li>-->
+                    </ul>
+                </div>
+        
+                <!-- Sección de recursos -->
+                <div class="footer-section">
+                    <h5>Recursos</h5>
+                    <ul>
+                        <li><a href="ActivDidac.html">Materiales Didácticos</a></li>
+                        <li><a href="index.html">Guías</a></li>
+                        <li><a href="AcercaDe.html">Contacto</a></li>
+                    </ul>
+                </div>
+        
+                <!-- Sección de redes sociales -->
+                <div class="footer-section">
+                    <h5>Conéctate con nosotros</h5>
+                    <ul class="social-icons">
+                        <li><a href="https://www.facebook.com/profile.php?id=61565597855845" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="https://www.instagram.com/edukids546/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="https://x.com/Manzanita6432" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="www.linkedin.com/in/amparito-maximiliano-rodriguez" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Mi Pagina. Todos los derechos reservados.</p>
+            </div>
+        </footer>
+    
+
+    <script>
+        function mostrarCuento(id) {
+            document.querySelectorAll('.cuento').forEach(cuento => cuento.style.display = 'none');
+            document.getElementById(id).style.display = 'block';
+        }
+    </script>
+</body>
+</html>

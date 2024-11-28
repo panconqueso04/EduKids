@@ -3,9 +3,129 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Mi Pagina</title>
+    <link rel="stylesheet" href="style_home.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
-    <h1>Hola Mundo</h1>
+    
+ <!-- Incluir el encabezado/menu -->
+     <header class="header">  
+           <div class="menu container">
+                <a href="index.html" class="logo">
+                    <img src="Img/logo.svg" alt="Logo de la página">
+               </a>
+
+                <nav class="navbar">
+                   <ul> 
+                       <li> <a href="index.html"> Inicio </a></li>
+                       <li> <a href="RinconDivertido.html"> Rincón Divertido </a></li>
+                        <li> <a href="ActivDidac.html"> Actividades Didácticas  </a></li>
+                       <li> <a href="ApreJug.html">  ¡A Jugar!  </a></li>
+                    <li> <a href="AcercaDe.html"> Acerca de  </a></li>
+                    </ul>
+                </nav>
+        </div>    
+        
+        
+      <div class="header-content container">
+        <div class="header-txt">
+            <h1> Educa con  amor <br> e inspira el futuro</h1> 
+            <p>
+                Transformamos el aprendizaje en una experiencia fascinante, 
+                que hacen que cada momento educativo sea tan entretenido 
+                como enriquecedor.
+    
+            </p>
+            <div class="butons">
+                <a href="AcercaDe.html" class="btn-1 "> Informacion</a>
+                <a href="ActivDidac.html" class="btn-1 btn-principal"> Actividades</a>
+            </div>
+        </div>
+    </div>
+    </header>
+
+        <!-- Sección de tarjetas con imágenes -->
+        <div class="tarjetas">
+        <div class="card">
+            <img src="Img/Card1.svg" alt="Explora lo que tenemos para ti">
+            <h2>Explora lo que tenemos para ti</h2>
+        </div>
+        <div class="card">
+            <img src="Img/Card3.svg" alt="Materiales Didácticos">
+            <h2>Materiales Didácticos</h2>
+        </div>
+        <div class="card">
+            <img src="Img/Card2.svg" alt="Aprende divirtiéndote">
+            <h2>Aprende divirtiéndote</h2>
+        </div>
+    </div>
+
+     <!-- Nueva sección: Tu fuente de diversión -->
+        <div class="detalles">
+            <div class="conoce">
+                <h3>Tu fuente de aprendizaje</h3>
+                <p> Una combinación única de creatividad, curiosidad y experiencia práctica.</p>
+                <div class="btn-conoce'">
+                    <a href="Acercade.html">
+                        <button class="btn-1 btn-conoce">Conócenos más</button>
+                    </a>
+                </div>
+                <img src="Img/ConoceMas.svg" class="about-image" alt="Imagen de diversión">
+            </div>
+        </div>
+
+    <!-- Sección extra de contacto y boletín -->
+    <section id="contacto" class="contactos">
+        <div class="contact-content">
+            <h4>Unete a nuestra familia  </h4>
+            <form>
+                <input type="email" placeholder="Escribe tu correo">
+                <input type="submit" class="btn-3" value="Enviar">
+        </div>
+    </section>
+
+        <!-- Pie de página -->
+        <footer class="footer">
+            <div class="footer-content container">
+                <!-- Sección de navegación -->
+                <div class="footer-section">
+                    <h5>Información</h5>
+                    <ul>
+                        <li><a href="AcercaDe.html">Acerca de nosotros</a></li>
+                        <li><a href="TerminosCondiciones.html">Términos y Condiciones</a></li>
+                        <li><a href="PoliticaPrivacidad.html">Política de Privacidad</a></li>
+                        <li><a href="#">FAQs</a></li>
+                    </ul>
+                </div>
+        
+                <!-- Sección de recursos -->
+                <div class="footer-section">
+                    <h5>Recursos</h5>
+                    <ul>
+                        <li><a href="ActivDidac.html">Blogs</a></li>
+                        <li><a href="ActivDidac.html">Materiales Didácticos</a></li>
+                        <li><a href="index.html">Guías</a></li>
+                        <li><a href="AcercaDe.html">Contacto</a></li>
+                    </ul>
+                </div>
+        
+                <!-- Sección de redes sociales -->
+                <div class="footer-section">
+                    <h5>Conéctate con nosotros</h5>
+                    <ul class="social-icons">
+                        <li><a href="https://www.facebook.com/profile.php?id=61565597855845" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="https://www.instagram.com/edukids546/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="https://x.com/Manzanita6432" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="www.linkedin.com/in/amparito-maximiliano-rodriguez" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Mi Pagina. Todos los derechos reservados.</p>
+            </div>
+        </footer>
+    
+
 </body>
 </html>

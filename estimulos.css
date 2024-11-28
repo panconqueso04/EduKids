@@ -1,0 +1,117 @@
+body {
+    font-family: "Lilita One", sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fff8ec;
+}
+
+.contenedor {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px 10px 10px 10px; 
+    margin-top: 185px;
+}
+
+h1 {
+    color: #4CAF50;
+    text-align: center; 
+    font-size: 42px;
+}
+
+
+/* Si quieres que el color gris se mantenga cuando el usuario pasa el ratón por encima */
+.navbar ul li:nth-child(4) a:hover {
+    color: #555;  /* Gris más oscuro para el hover */
+}
+p{
+    font-size: 24px;
+}
+
+.imagenes-sonido {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); 
+    gap: 30px;
+    margin: 20px 0;
+}
+
+.imagen {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%; 
+    height: 200px; 
+    transition: transform 0.3s ease;
+    border: 3px solid #ddd;
+}
+
+.imagen img {
+    width: 100%; /* Ajustar ancho al contenedor */
+    max-width: 350px; /* Limitar el ancho máximo */
+    height: auto; /* Mantener proporciones */
+}
+
+
+.imagen:hover {
+    transform: scale(1.1); 
+}
+
+.imagen img:hover {
+    transform: scale(1.2); 
+}
+
+@media (max-width: 768px) {
+    .imagenes-sonido {
+        flex: 1 1 calc(50% - 20px); 
+    }
+}
+
+@media (max-width: 480px) {
+    .imagen {
+        flex: 1 1 100%; 
+    }
+}
+
+@media (max-width: 768px) {
+    .imagenes-sonido {
+        grid-template-columns: repeat(2, 1fr); /* Cambiar a dos columnas en tabletas */
+        gap: 20px; /* Reducir el espacio entre elementos */
+    }
+}
+
+@media (max-width: 480px) {
+    .imagenes-sonido {
+        grid-template-columns: 1fr; /* Una sola columna en móviles */
+        gap: 15px; /* Ajustar espacio para pantallas más pequeñas */
+    }
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 32px; /* Reducir tamaño del título */
+    }
+
+    p {
+        font-size: 18px; /* Reducir tamaño del párrafo */
+    }
+
+    .contenedor {
+        padding: 20px 5px; /* Reducir padding general */
+    }
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 28px; /* Aún más pequeño para móviles */
+    }
+
+    p {
+        font-size: 16px;
+    }
+
+    .contenedor {
+        padding: 10px; /* Menor espacio lateral */
+    }
+}
