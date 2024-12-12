@@ -10,99 +10,77 @@
 </head>
 <body>
 
-<!-- Menú -->
-<div class="menu container">
-    <a href="index.html" class="logo">
-        <img src="Img/logo.svg" alt="Logo de la página">
-    </a>
-    <nav class="navbar">
-        <ul id="menu"> 
-            <li> <a href="index.html"> Inicio </a></li>
-            <li> <a href="RinconDivertido.html"> Rincón Divertido </a></li>
-            <li> <a href="ActivDidac.html"> Actividades Didácticas  </a></li>
-            <li> <a href="ApreJug.html">  ¡A Jugar!  </a></li>
-            <li> <a href="AcercaDe.html"> Acerca de  </a></li>
-        </ul>
-    </nav>
-</div>
+    <!-- Menú -->
+    <div class="menu container">
+        <a href="index.html" class="logo">
+            <img src="Img/logo.svg" alt="Logo de la página">
+        </a>
+        <nav class="navbar">
+            <ul> 
+                <li> <a href="index.html"> Inicio </a></li>
+                <li> <a href="RinconDivertido.html"> Rincón Divertido </a></li>
+                <li> <a href="ActivDidac.html"> Actividades Didácticas  </a></li>
+                <li> <a href="ApreJug.html">  ¡A Jugar!  </a></li>
+                <li> <a href="AcercaDe.html"> Acerca de  </a></li>
+            </ul>
+        </nav>
+    </div> 
 
+<section id="movimiento" class="ga">
 
-        <h1>Luces y Movimiento para Bebés</h1>
+    <h1>Explotación de colores</h1>
+    <p>
+        Descubre actividades interactivas diseñadas para estimular el movimiento y la percepción de colores. Haz clic en el siguiente enlace para explorar más:
+    </p>
+    <br>
+    <iframe 
+        src="https://joshualogsdon.com/games/gumdrop-popper/" 
+        id="actividad-iframe" 
+        width="900" 
+        height="600" 
+        style="border: none; border-radius: 8px;">
+    </iframe>
+</section>
 
-        <!-- 1. Sección de Luces Interactivas -->
-        <div class="section">
-            <h2>Luces Interactivas</h2>
-            <div class="interactive">
-                <div class="circle" onclick="lightUp(this)"></div>
-                <div class="circle" onclick="lightUp(this)"></div>
-                <div class="circle" onclick="lightUp(this)"></div>
-                <div class="circle" onclick="lightUp(this)"></div>
-            </div>
+<!-- Pie de página -->
+<footer class="footer">
+    <div class="footer-content container">
+        <!-- Sección de navegación -->
+        <div class="footer-section">
+            <h5>Información</h5>
+            <ul>
+                <li><a href="AcercaDe.html">Acerca de nosotros</a></li>
+                <li><a href="TerminosCondiciones.html">Términos y Condiciones</a></li>
+                <li><a href="PoliticaPrivacidad.html">Política de Privacidad</a></li>
+            </ul>
         </div>
-    
-        <!-- 2. Sección de Carrusel de Colores -->
-        <div class="section">
-            <h2>Carrusel de Colores</h2>
-            <div class="carousel" onclick="changeColor()">
-                <div class="carousel-item"></div>
-                <div class="carousel-item"></div>
-                <div class="carousel-item"></div>
-            </div>
-        </div>
-    
-        <!-- 3. Sección de Proyección Virtual -->
-        <div class="section">
-            <h2>Proyección Virtual</h2>
-            <div class="projection">
-                <div class="light" id="light1"></div>
-                <div class="light" id="light2"></div>
-                <div class="light" id="light3"></div>
-            </div>
-            <audio controls autoplay loop>
-                <source src="Soni-Estimulacion/AudioLuces.mp3" type="audio/mp3">
-                Tu navegador no soporta audio.
-            </audio>
-        </div>  
 
-        <!-- Pie de página -->
-        <footer class="footer">
-            <div class="footer-content container">
-                <!-- Sección de navegación -->
-                <div class="footer-section">
-                    <h5>Información</h5>
-                    <ul>
-                        <li><a href="AcercaDe.html">Acerca de nosotros</a></li>
-                        <li><a href="TerminosCondiciones.html">Términos y Condiciones</a></li>
-                        <li><a href="PoliticaPrivacidad.html">Política de Privacidad</a></li>
-                        <!--<li><a href="#">FAQs</a></li>-->
-                    </ul>
-                </div>
-        
-                <!-- Sección de recursos -->
-                <div class="footer-section">
-                    <h5>Recursos</h5>
-                    <ul>
-                        <li><a href="ActivDidac.html">Materiales Didácticos</a></li>
-                        <li><a href="index.html">Guías</a></li>
-                        <li><a href="AcercaDe.html">Contacto</a></li>
-                    </ul>
-                </div>
-        
-                <!-- Sección de redes sociales -->
-                <div class="footer-section">
-                    <h5>Conéctate con nosotros</h5>
-                    <ul class="social-icons">
-                        <li><a href="https://www.facebook.com/profile.php?id=61565597855845" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
-                        <li><a href="https://www.instagram.com/edukids546/" target="_blank"><i class="fab fa-instagram"></i></a></li>
-                        <li><a href="https://x.com/Manzanita6432" target="_blank"><i class="fab fa-twitter"></i></a></li>
-                        <li><a href="www.linkedin.com/in/amparito-maximiliano-rodriguez" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2024 Mi Pagina. Todos los derechos reservados.</p>
-            </div>
-        </footer>
+        <!-- Sección de recursos -->
+        <div class="footer-section">
+            <h5>Recursos</h5>
+            <ul>
+                <li><a href="ActivDidac.html">Materiales Didácticos</a></li>
+                <li><a href="index.html">Guías</a></li>
+                <li><a href="AcercaDe.html">Contacto</a></li>
+            </ul>
+        </div>
+
+        <!-- Sección de redes sociales -->
+        <div class="footer-section">
+            <h5>Conéctate con nosotros</h5>
+            <ul class="social-icons">
+                <li><a href="https://www.facebook.com/profile.php?id=61565597855845" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                <li><a href="https://www.instagram.com/edukids546/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                <li><a href="https://x.com/Manzanita6432" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                <li><a href="www.linkedin.com/in/amparito-maximiliano-rodriguez" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2024 Mi Pagina. Todos los derechos reservados.</p>
+    </div>
+</footer>
+
     
     <script src="LucesMovimiento.js"></script>
 </body>

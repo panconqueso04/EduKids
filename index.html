@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edu Kids</title>
+    <title>Edukids</title>
     <link rel="stylesheet" href="style_home.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
@@ -16,6 +16,10 @@
                     <img src="Img/logo.svg" alt="Logo de la página">
                </a>
 
+            <!-- Botón hamburguesa -->
+            <div class="menu-btn">
+                <div class="menu-btn__burger"></div>
+            </div>
                 <nav class="navbar">
                    <ul> 
                        <li> <a href="index.html"> Inicio </a></li>
@@ -95,7 +99,6 @@
                         <li><a href="AcercaDe.html">Acerca de nosotros</a></li>
                         <li><a href="TerminosCondiciones.html">Términos y Condiciones</a></li>
                         <li><a href="PoliticaPrivacidad.html">Política de Privacidad</a></li>
-                        <li><a href="#">FAQs</a></li>
                     </ul>
                 </div>
         
@@ -103,7 +106,6 @@
                 <div class="footer-section">
                     <h5>Recursos</h5>
                     <ul>
-                        <li><a href="ActivDidac.html">Blogs</a></li>
                         <li><a href="ActivDidac.html">Materiales Didácticos</a></li>
                         <li><a href="index.html">Guías</a></li>
                         <li><a href="AcercaDe.html">Contacto</a></li>
@@ -126,6 +128,30 @@
             </div>
         </footer>
     
-
+        <script>const menuBtn = document.querySelector('.menu-btn');
+            const navbar = document.querySelector('.navbar');
+            let menuOpen = false;
+            
+            menuBtn.addEventListener('click', () => {
+                if(!menuOpen) {
+                    menuBtn.classList.add('open');
+                    navbar.classList.add('active');
+                    menuOpen = true;
+                } else {
+                    menuBtn.classList.remove('open');
+                    navbar.classList.remove('active');
+                    menuOpen = false;
+                }
+            });
+            
+            // Cerrar menú al hacer clic en un enlace
+            const navLinks = document.querySelectorAll('.nav-list a');
+            navLinks.forEach(link => {
+                link.addEventListener('click', () => {
+                    menuBtn.classList.remove('open');
+                    navbar.classList.remove('active');
+                    menuOpen = false;
+                });
+            });</script>
 </body>
 </html>

@@ -27,48 +27,49 @@
         </div> 
 
         <!-- Sección TDAH -->
-<section class="tdah-section">   
-     <h1><img src="TDAH/Icono.svg" alt="Icono TADH" class="icono">Actividades para niños con TDAH</h1>
-    <p>El TDAH, o Trastorno por Déficit de Atención e Hiperactividad, es una condición que afecta la capacidad de mantener la atención, controlar impulsos y concentrarse en actividades. Estas actividades están diseñadas para ayudar a los niños con TDAH a desarrollar habilidades de atención, memoria, y relajación de manera divertida y accesible.</p>
-    
-    <div class="activity-cards">
-        <div class="card">
-            <a href="AtencionVisual.html" class="card-link">
-                <img src="TDAH/Visual.svg" alt="Atención Visual" class="card-icon">
-                <div class="card-content">
-                    <p>🔍 <strong>Atención Visual:</strong> Encuentra las diferencias y detalles en las imágenes.</p>
-                </div>
-            </a>
-        </div>
+        <section class="tdah-section">   
+            <h1><img src="TDAH/Icono.svg" alt="Icono TDAH" class="icono">Actividades para niños con TDAH</h1>
+            <p>El TDAH, o Trastorno por Déficit de Atención e Hiperactividad, es una condición que afecta la capacidad de mantener la atención, controlar impulsos y concentrarse en actividades. Estas actividades están diseñadas para ayudar a los niños con TDAH a desarrollar habilidades de atención, memoria, y relajación de manera divertida y accesible.</p>
         
-        <div class="card">
-            <a href="Secuencias.html" class="card-link">
-                <img src="TDAH/Ordenar.svg" alt="Secuencia" class="card-icon">
-                <div class="card-content">
-                    <p>🗂️ <strong>Juego de Secuencias:</strong> Ordena los pasos en una actividad cotidiana.</p>
+            <div class="activity-cards">
+                <div class="card">
+                    <button class="card-link" onclick="openModal('https://www.cokitos.com/juegos/buscar-3-diferencias/')">
+                        <img src="TDAH/Visual.svg" alt="Atención Visual" class="card-icon">
+                        <div class="card-content">
+                            <p>🔍 <strong>Atención Visual:</strong> Encuentra las diferencias y detalles en las imágenes.</p>
+                        </div>
+                    </button>
                 </div>
-            </a>
-        </div>
         
-        <div class="card">
-            <a href="Memoria.html" class="card-link">
-                <img src="TDAH/Memoria.svg" alt="Memoria" class="card-icon">
-                <div class="card-content">
-                    <p>💡 <strong>Memoria:</strong> Encuentra pares de cartas y repite patrones de colores.</p>
+                <div class="card">
+                    <button class="card-link" onclick="openModal('https://play.gamepix.com/baby-hazel-bed-time/embed?sid=552IT')"width="900" height="600" frameborder="0" scrolling="no">
+                        <img src="TDAH/Ordenar.svg" alt="Secuencia" class="card-icon">
+                        <div class="card-content">
+                            <p>🗂️ <strong>Juego de Secuencias:</strong> Ordena los pasos en una actividad cotidiana.</p>
+                        </div>
+                    </button>
                 </div>
-            </a>
-        </div>
         
-        <div class="card">
-            <a href="RespiracionGuiada.html" class="card-link">
-                <img src="TDAH/Respiracion.svg" alt="Respiración Guiada" class="card-icon">
-                <div class="card-content">
-                    <p>🌬️ <strong>Respiración Guiada:</strong> Practica ejercicios de respiración para relajarse.</p>
+                <div class="card">
+                    <button class="card-link" onclick="openModal('https://html5.gamedistribution.com/360fe3123a754409990e1b565e88166c/?gd_sdk_referrer_url=https://www.cokitos.com/buscar-parejas-de-animales/play/')">
+                        <img src="TDAH/Memoria.svg" alt="Memoria" class="card-icon">
+                        <div class="card-content">
+                            <p>💡 <strong>Memoria:</strong> Encuentra pares de cartas y repite patrones de colores.</p>
+                        </div>
+                    </button>
                 </div>
-            </a>
-        </div>
-    </div>
+                
+            </div>
+            
 </section>
+<div id="gameModal" class="modal">
+    <div class="modal-content">
+        <button class="modal-close" onclick="closeModal()">×</button>
+        <iframe id="modalFrame" src=""></iframe>
+    </div>
+</div>
+
+
 
         
         <!-- Pie de página -->
@@ -110,6 +111,24 @@
                 <p>&copy; 2024 Mi Pagina. Todos los derechos reservados.</p>
             </div>
         </footer>
+        <script>
+            // Función para abrir el modal
+            function openModal(url) {
+                const modal = document.getElementById('gameModal');
+                const iframe = document.getElementById('modalFrame');
+                iframe.src = url; // Carga la página en el iframe
+                modal.style.display = 'flex'; // Muestra el modal
+            }
     
+            // Función para cerrar el modal
+            function closeModal() {
+                const modal = document.getElementById('gameModal');
+                const iframe = document.getElementById('modalFrame');
+                iframe.src = ''; // Limpia el iframe
+                modal.style.display = 'none'; // Oculta el modal
+            }
+
+
+        </script>
 </body>
 </html>

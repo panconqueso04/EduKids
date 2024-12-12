@@ -140,6 +140,7 @@ img {
     gap: 30px;
     justify-items: center;
     text-align: center;
+    margin-left: 450px;
     padding: 0 180px; /* Añadir padding para ajustar el contenido */
 
 }

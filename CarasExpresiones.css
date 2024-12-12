@@ -126,11 +126,6 @@ img {
     margin-left: 450px;
   }
   
-  
-/* Si quieres que el color gris se mantenga cuando el usuario pasa el ratón por encima */
-.navbar ul li:nth-child(4) a:hover {
-    color: #555;  /* Gris más oscuro para el hover */
-}
   .cards {
     display: flex;
     justify-content: center;
@@ -139,13 +134,14 @@ img {
   }
   
   .card {
-    width: 450px; 
+    width: 250px; 
     height: auto;
     border-radius: 15px; 
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
     cursor: pointer;
     transition: transform 0.3s, box-shadow 0.3s;
     overflow: hidden; 
+    margin-bottom: 40px;
   }
   
   .card img {

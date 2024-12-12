@@ -31,45 +31,42 @@
     <h1><img src="Autismo/Icono.svg" alt="Icono Autismo" class="icono">Actividades para Niños con Autismo</h1>
     <p>El autismo es una condición que afecta la comunicación y la interacción social. Estas actividades están diseñadas para ayudar a los niños con autismo a mejorar sus habilidades sociales, reconocer emociones, y establecer rutinas de forma divertida e interactiva.</p>
     
-    <div class="activity-cards">
+    <div class="activity-cards">        
         <div class="card">
-            <a href="Emociones.html" class="card-link">
-                <img src="Autismo/Emociones.svg" alt="Emociones Básicas" class="card-icon">
-                <div class="card-content">
-                    <p>😊 <strong>Emociones Básicas:</strong> Aprende a identificar emociones a través de caritas.</p>
-                </div>
-            </a>
-        </div>
-        
-        <div class="card">
-            <a href="Rutinas.html" class="card-link">
+            <button class="card-link" onclick="openModal('https://html5.gamemonetize.co/rulh22mrjymve18yh4emthfumpbexxtl/?key=y8&value=default')">
                 <img src="Autismo/Organizar.svg" alt="Rutinas Diarias" class="card-icon">
                 <div class="card-content">
                     <p>📅 <strong>Rutinas Diarias:</strong> Organiza actividades diarias en su orden.</p>
                 </div>
-            </a>
+            </button>
         </div>
         
         <div class="card">
-            <a href="Emparejamiento.html" class="card-link">
+            <button class="card-link" onclick="openModal('https://html5.gamedistribution.com/eadc446bda7b4ef2b33c987d5d85193a/?gd_sdk_referrer_url=https://www.cokitos.com/bird-sort-agrupar-y-clasificar-los-pajaros/play/')">
                 <img src="Autismo/Formas.svg" alt="Emparejar y Clasificar" class="card-icon">
                 <div class="card-content">
                     <p>🎨 <strong>Emparejar y Clasificar:</strong> Ordena colores, formas y animales.</p>
                 </div>
-            </a>
+            </button>
         </div>
         
         <div class="card">
-            <a href="EscenariosSociales.html" class="card-link">
+            <button class="card-link" onclick="openModal('https://static.tinytap.com/media/webplayer/webplayer.html?id=B75620FD-3588-4623-8EE6-012C8E271C1E')">
                 <img src="Autismo/Saluso.svg" alt="Escenarios Sociales" class="card-icon">
                 <div class="card-content">
                     <p>🤝 <strong>Escenarios Sociales:</strong> Practica saludos y respuestas en diferentes situaciones.</p>
                 </div>
-            </a>
+            </button>
         </div>
     </div>
 </section>
-        
+<div id="gameModal" class="modal">
+    <div class="modal-content">
+        <button class="modal-close" onclick="closeModal()">×</button>
+        <iframe id="modalFrame" src=""></iframe>
+    </div>
+</div>
+    
         <!-- Pie de página -->
         <footer class="footer">
             <div class="footer-content container">
@@ -110,6 +107,22 @@
             </div>
         </footer>
     
+        <script>
+            // Función para abrir el modal
+            function openModal(url) {
+                const modal = document.getElementById('gameModal');
+                const iframe = document.getElementById('modalFrame');
+                iframe.src = url; // Carga la página en el iframe
+                modal.style.display = 'flex'; // Muestra el modal
+            }
     
+            // Función para cerrar el modal
+            function closeModal() {
+                const modal = document.getElementById('gameModal');
+                const iframe = document.getElementById('modalFrame');
+                iframe.src = ''; // Limpia el iframe
+                modal.style.display = 'none'; // Oculta el modal
+            }
+        </script>
 </body>
 </html>

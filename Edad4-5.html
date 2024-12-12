@@ -33,56 +33,61 @@
 
     <section class="grid-container">
         <!-- Juego de Letras y Sonidos -->
-        <a href="LetrasSonidos.html" class="grid-item">
+        <div class="grid-item" onclick="openModal('https://static.tinytap.com/media/webplayer/webplayer.html?id=4E97DBDD-FDD6-4C79-95D0-36C845CD669E')">
             <img src="Img4-5/IconLetras.svg" alt="Juego de Letras y Sonidos">
             <p>🔤 <strong>Letras y Sonidos:</strong> Aprende las letras y sus sonidos para comenzar a leer.</p>
-        </a>
+        </div>
 
         <!-- Contar hasta 10 -->
-        <a href="ContarHasta10.html" class="grid-item">
+        <div class="grid-item" onclick="openModal('https://html5.gamedistribution.com/9c58d04d0d944275be0bfe3f037ae60a/')">
             <img src="Img4-5/IconContar.svg" alt="Contar hasta 10">
             <p>🔢 <strong>Contar hasta 10:</strong> Practica contar y reconocer números del 1 al 10.</p>
-        </a>
+        </div>
 
         <!-- Juego de Secuencias -->
-        <a href="JuegoSecuencias.html" class="grid-item">
+        <div class="grid-item" onclick="openModal('https://html5.gamedistribution.com/rvvASMiM/3ef8f2cc7f4a4a36a0c293533308f0f8/index.html?gd_sdk_referrer_url=https%3A%2F%2Fwww.cokitos.com%2Fsecuencias-de-formas%2Fplay%2F&gd_zone_config=eyJwYXJlbnRVUkwiOiJodHRwczovL3d3dy5jb2tpdG9zLmNvbS9zZWN1ZW5jaWFzLWRlLWZvcm1hcy9wbGF5LyIsInBhcmVudERvbWFpbiI6ImNva2l0b3MuY29tIiwidG9wRG9tYWluIjoiY29raXRvcy5jb20iLCJoYXNJbXByZXNzaW9uIjpmYWxzZSwibG9hZGVyRW5hYmxlZCI6dHJ1ZSwiaG9zdCI6Imh0bWw1LmdhbWVkaXN0cmlidXRpb24uY29tIiwidmVyc2lvbiI6IjEuNS4xNyJ9')">
             <img src="Img4-5/IconSecuencia.svg" alt="Juego de Secuencias">
             <p>🔗 <strong>Secuencias:</strong> Ordena elementos siguiendo una secuencia lógica.</p>
-        </a>
+        </div>
 
         <!-- Figuras y Tamaños -->
-        <a href="FigurasTamaños.html" class="grid-item">
+        <div class="grid-item" onclick="openModal('https://www.digipuzzle.net/digipuzzle/kids/puzzles/linkpuzzle_shape_shadows.htm?language=spanish')">
             <img src="Img4-5/IconFiguras.svg" alt="Figuras y Tamaños">
             <p>🟥 <strong>Figuras y Tamaños:</strong> Identifica y clasifica figuras según su tamaño y forma.</p>
-        </a>
+        </div>
 
         <!-- Cuentos Interactivos -->
-        <a href="CuentosInteractivos.html" class="grid-item">
+        <div class="grid-item" onclick="openModal('https://wordwall.net/es/embed/46be4d33f6054d41ac13ee6e29a2fca8?themeId=1&templateId=5&fontStackId=15')">
             <img src="Img4-5/IconLectura.svg" alt="Lectura Interactivos">
             <p>📖 <strong>Lectura Interactiva:</strong> Escucha y participa en lecturas con preguntas interactivas.</p>
-        </a>
+        </div>
 
         <!-- Juego de Asociar Palabras con Imágenes -->
-        <a href="AsociarPalabrasImagenes.html" class="grid-item">
+        <div class="grid-item" onclick="openModal('https://wordwall.net/es/embed/42f4a5e6ae2b4a79967b75a6e51094dd?themeId=1&templateId=3&fontStackId=0')">
             <img src="Img4-5/IconAsociar.svg" alt="Asociar Palabras e Imágenes">
             <p>🖼️ <strong>Palabras e Imágenes:</strong> Relaciona palabras con sus imágenes correspondientes.</p>
-        </a>
+        </div>
 
         <!-- Clasificación de Objetos -->
-        <a href="ClasificacionObjetos.html" class="grid-item">
+        <div class="grid-item" onclick="openModal('https://www.cokitos.com/juegos/clasificar-tamanos/')">
             <img src="Img4-5/IconClasificacion.svg" alt="Clasificación de Objetos">
             <p>🔍 <strong>Clasificación:</strong> Agrupa objetos según color, forma o función.</p>
-        </a>
+        </div>
 
         <!-- Juego de Rimas Simples -->
-        <a href="RimasSimples.html" class="grid-item">
+        <div class="grid-item" onclick="openModal('https://wordwall.net/es/embed/3da916ebbc0d4ab6a5c3651155a68bd8?themeId=1&templateId=5&fontStackId=0')">
             <img src="Img4-5/IconRimas.svg" alt="Rimas Simples">
             <p>🎶 <strong>Rimas Simples:</strong> Aprende palabras que riman y diviértete con sonidos.</p>
-        </a>
+        </div>
     </section>
 </main>
 
-
+<div id="gameModal" class="modal">
+    <div class="modal-content">
+        <button class="modal-close" onclick="closeModal()">×</button>
+        <iframe id="modalFrame" src=""></iframe>
+    </div>
+</div>
 
         <!-- Pie de página -->
         <footer class="footer">
@@ -124,6 +129,22 @@
             </div>
         </footer>
     
-
+        <script>
+            // Función para abrir el modal
+            function openModal(url) {
+                const modal = document.getElementById('gameModal');
+                const iframe = document.getElementById('modalFrame');
+                iframe.src = url; // Carga la página en el iframe
+                modal.style.display = 'flex'; // Muestra el modal
+            }
+    
+            // Función para cerrar el modal
+            function closeModal() {
+                const modal = document.getElementById('gameModal');
+                const iframe = document.getElementById('modalFrame');
+                iframe.src = ''; // Limpia el iframe
+                modal.style.display = 'none'; // Oculta el modal
+            }
+        </script>
 </body>
 </html>

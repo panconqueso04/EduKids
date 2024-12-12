@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aprende Jugando</title>
+    <link rel="stylesheet" href="ApreJug.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <!-- Menú -->
+    <header class="menu container">
+        <a href="index.html" class="logo">
+            <img src="Img/logo.svg" alt="Logo de la página">
+        </a>
+
+                    <!-- Botón hamburguesa -->
+    <div class="menu-btn">
+        <div class="menu-btn__burger"></div>
+    </div>
+        <nav class="navbar">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="RinconDivertido.html">Rincón Divertido</a></li>
+                <li><a href="ActivDidac.html">Actividades Didácticas</a></li>
+                <li><a href="ApreJug.html">¡A Jugar!</a></li>
+                <li><a href="AcercaDe.html">Acerca de</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Sección Aprende Jugando -->
+    <section class="aprende-jugando container">
+        <div class="content">
+            <i class="fas fa-gamepad"></i>
+            <div class="text">
+                <h2>¡Aprende Jugando!</h2>
+                <p>Descubre cómo el aprendizaje puede ser una experiencia divertida e interactiva. Juegos diseñados para potenciar habilidades mientras te diviertes.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="game-gallery container">
+        <div class="game-card" onclick="openGame('https://html5.gamemonetize.co/a806kmuqvu7vjinnnfyh5d41h1tibfr1/?key=y8&value=default')">
+            <img src="Jugar/Figuras.png" alt="Vamos a trazar Figuras Geométricas">
+            <h3>Vamos a trazar Figuras Geométricas</h3>
+        </div>
+        
+        <div class="game-card" onclick="openGame('https://html5.gamemonetize.co/n43ix1bxo2qscu95bz8zwt1ev56fc5e4/?key=y8&value=default')">
+            <img src="Jugar/Huesos.png" alt="Vamos a trazar Figuras Geométricas">
+            <h3>Vamos a trazar Figuras Geométricas</h3>
+        </div>
+
+        <div class="game-card" onclick="openGame('https://html5.gamemonetize.co/x6od5q5lupuom74paxg1cvgchssh86de/?key=y8&value=default')">
+            <img src="Jugar/Rompe}.png" alt="Vamos a trazar Figuras Geométricas">
+            <h3>Vamos a trazar Figuras Geométricas</h3>
+        </div>
+        
+        <div class="game-card" onclick="openGame('https://www.cokitos.com/juegos/libro-animales/')">
+            <img src="Jugar/Pintae.png" alt="Vamos a trazar Figuras Geométricas">
+            <h3>Vamos a trazar Figuras Geométricas</h3>
+        </div>
+        <div class="game-card" onclick="openGame('https://html5.gamedistribution.com/f8bf0ffa48f84927b1a7ec08889bde69/?gd_sdk_referrer_url=https://www.cokitos.com/es-comestible/play/')">
+            <img src="Jugar/Comestible.png" alt="Vamos a trazar Figuras Geométricas">
+            <h3>Vamos a trazar Figuras Geométricas</h3>
+        </div>
+        
+        <div class="game-card" onclick="openGame('https://www.cokitos.com/juegos/feed-petdog/')">
+            <img src="Jugar/SumaPerro.png" alt="Vamos a trazar Figuras Geométricas">
+            <h3>Vamos a trazar Figuras Geométricas</h3>
+        </div>
+
+        <div class="game-card" onclick="openGame('https://html5.gamemonetize.co/7n48qgpy5q9lr1u4bxn57zilupzg9fio/?key=y8&value=default')">
+            <img src="Jugar/Ocupaciones.png" alt="Vamos a trazar Figuras Geométricas">
+            <h3>Vamos a trazar Figuras Geométricas</h3>
+        </div>
+        <div class="game-card" onclick="openGame('https://html5.gamemonetize.co/svfs9hs1gt5jptm14zv2z3jp4n4ldl93/?key=y8&value=default')">
+            <img src="Jugar/Contrario.png" alt="Vamos a trazar Figuras Geométricas">
+            <h3>Vamos a trazar Figuras Geométricas</h3>
+        </div>
+        
+        <div class="game-card" onclick="openGame('https://www.cokitos.com/juegos/escribir-letras/')">
+            <img src="Jugar/escribir.png" alt="Vamos a trazar Figuras Geométricas">
+            <h3>Vamos a trazar Figuras Geométricas</h3>
+        </div>
+    </section>
+    
+<!-- Contenedor del Modal -->
+<div id="gameModal" class="modal">
+    <div class="modal-content">
+        <span class="close" onclick="closeGame()">&times;</span>
+        <iframe id="gameFrame" src="" frameborder="0"></iframe>
+    </div>
+</div>
+
+        <!-- Pie de página -->
+        <footer class="footer">
+            <div class="footer-content container">
+                <!-- Sección de navegación -->
+                <div class="footer-section">
+                    <h5>Información</h5>
+                    <ul>
+                        <li><a href="AcercaDe.html">Acerca de nosotros</a></li>
+                        <li><a href="TerminosCondiciones.html">Términos y Condiciones</a></li>
+                        <li><a href="PoliticaPrivacidad.html">Política de Privacidad</a></li>
+                        <li><a href="#">FAQs</a></li>
+                    </ul>
+                </div>
+        
+                <!-- Sección de recursos -->
+                <div class="footer-section">
+                    <h5>Recursos</h5>
+                    <ul>
+                        <li><a href="ActivDidac.html">Blogs</a></li>
+                        <li><a href="ActivDidac.html">Materiales Didácticos</a></li>
+                        <li><a href="index.html">Guías</a></li>
+                        <li><a href="AcercaDe.html">Contacto</a></li>
+                    </ul>
+                </div>
+        
+                <!-- Sección de redes sociales -->
+                <div class="footer-section">
+                    <h5>Conéctate con nosotros</h5>
+                    <ul class="social-icons">
+                        <li><a href="https://www.facebook.com/profile.php?id=61565597855845" target="_blank"><i class="fab fa-facebook-f"></i></a></li>
+                        <li><a href="https://www.instagram.com/edukids546/" target="_blank"><i class="fab fa-instagram"></i></a></li>
+                        <li><a href="https://x.com/Manzanita6432" target="_blank"><i class="fab fa-twitter"></i></a></li>
+                        <li><a href="www.linkedin.com/in/amparito-maximiliano-rodriguez" target="_blank"><i class="fab fa-linkedin-in"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Mi Pagina. Todos los derechos reservados.</p>
+            </div>
+        </footer>
+
+<script src="ApreJug.js"></script>
+
+
+
+        
+
+</body>
+</html>

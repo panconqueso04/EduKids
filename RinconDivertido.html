@@ -14,6 +14,11 @@
         <a href="index.html" class="logo">
             <img src="Img/logo.svg" alt="Logo de la página">
         </a>
+
+                    <!-- Botón hamburguesa -->
+    <div class="menu-btn">
+        <div class="menu-btn__burger"></div>
+    </div>
         <nav class="navbar">
             <ul> 
                 <li> <a href="index.html"> Inicio </a></li>
@@ -38,7 +43,7 @@
 <div class="cards-container">
     <div class="card">
         <a href="Cuentos.html"> <!-- Enlace a la página de canciones -->
-        <img src="CantaCuentos/Tarjeta_Cuento.svg" alt="Imagen de Cuento">
+        <img src="CantaCuentos/Cuento.png" alt="Imagen de Cuento">
         <h3>Cuentos</h3>
         <br>
         <p>Encuentra una selección de cuentos infantiles para estimular la imaginación y el aprendizaje.</p>
@@ -54,7 +59,7 @@
     </div>
     <div class="card">
         <a href="Adivinanzas.html"> <!-- Enlace a la página de adivinanzas -->
-            <img src="CantaCuentos/Tarjeta_Adivinanzas.svg" alt="Imagen de Adivinanzas">
+            <img src="CantaCuentos/Adivinanzax.png" alt="Imagen de Adivinanzas">
             <h3>Adivinanzas</h3>
             <br>
             <p>Diviértete con adivinanzas que desafiarán la mente de los pequeños y fomentarán su creatividad.</p>
@@ -109,5 +114,33 @@
                 <p>&copy; 2024 Mi Pagina. Todos los derechos reservados.</p>
             </div>
         </footer>
+
+        <script>
+            const menuBtn = document.querySelector('.menu-btn');
+const navbar = document.querySelector('.navbar');
+let menuOpen = false;
+
+menuBtn.addEventListener('click', () => {
+    if(!menuOpen) {
+        menuBtn.classList.add('open');
+        navbar.classList.add('active');
+        menuOpen = true;
+    } else {
+        menuBtn.classList.remove('open');
+        navbar.classList.remove('active');
+        menuOpen = false;
+    }
+});
+
+// Cerrar menú al hacer clic en un enlace
+const navLinks = document.querySelectorAll('.nav-list a');
+navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        menuBtn.classList.remove('open');
+        navbar.classList.remove('active');
+        menuOpen = false;
+    });
+});
+        </script>
 </body>
 </html>

@@ -93,6 +93,130 @@ img {
     display: none;
 }
 
+/* Estilos del botón hamburguesa */
+.menu-btn {
+    display: none;
+    cursor: pointer;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+    z-index: 100;
+}
+
+.menu-btn__burger {
+    width: 30px;
+    height: 3px;
+    background-color: #333;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+}
+
+.menu-btn__burger::before,
+.menu-btn__burger::after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    background-color: #333;
+    transition: all 0.3s ease;
+}
+
+.menu-btn__burger::before {
+    transform: translateY(-10px);
+}
+
+.menu-btn__burger::after {
+    transform: translateY(10px);
+}
+
+/* Animación del botón hamburguesa */
+.menu-btn.open .menu-btn__burger {
+    transform: translateX(-50px);
+    background: transparent;
+}
+
+.menu-btn.open .menu-btn__burger::before {
+    transform: rotate(45deg) translate(35px, -35px);
+}
+
+.menu-btn.open .menu-btn__burger::after {
+    transform: rotate(-45deg) translate(35px, 35px);
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 2rem;
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: #333;
+}
+@media screen and (max-width: 768px) {
+    .menu-btn {
+        display: block;
+        position: absolute;
+        right: 1rem;
+        top: 1rem;
+    }
+
+    .navbar {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 100%; /* Ocupa toda la pantalla */
+        height: 100vh;
+        background-color: white;
+        padding-top: 60px;
+        transition: 0.3s ease;
+    }
+
+    .navbar.active {
+        right: 0;
+    }
+
+    .navbar ul {
+        display: flex;
+        flex-direction: column; /* Organiza los elementos en columna */
+        width: 100%; /* Ocupa todo el ancho disponible */
+        padding: 5px; /* Agrega un poco de espacio entre los elementos */
+    }
+
+    .navbar ul li {
+        width: 100%; /* Cada elemento ocupa todo el ancho */
+        text-align: left; /* Alinea el texto a la izquierda */
+        margin-bottom: 10px; /* Agrega un poco de espacio entre los elementos */
+    }
+
+    .navbar ul li a {
+        display: block;
+        font-size: 1.2rem;
+        padding: 10px 0;
+        text-decoration: none; /* Elimina la decoración del texto */
+        color: #333; /* Establece el color del texto */
+    }
+
+    .navbar ul li a:hover {
+        background-color: #f0f0f0; /* Agrega un fondo al texto al pasar el mouse */
+    }
+
+    /* Animación del botón hamburguesa */
+    .menu-btn.open .menu-btn__burger {
+        transform: rotate(45deg);
+    }
+
+    .menu-btn.open .menu-btn__burger::before {
+        transform: rotate(90deg) translate(0, 0);
+    }
+
+    .menu-btn.open .menu-btn__burger::after {
+        transform: rotate(90deg) translate(0, 0);
+    }
+}   
 
 /* Contenedor y Sección de Introducción */
 .intro {

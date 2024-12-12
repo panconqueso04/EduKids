@@ -17,12 +17,12 @@ img {
 }
 
 .container {
-    max-width: 100%; /* Make the container full-width */
+    max-width: 100%;
     margin: 0 auto;
     padding: 0 50px;
 }
 
-/* Fondo del header  */
+/* Header y menú */
 .header {
     background-image: url(Img/Encabezado.svg);
     background-position: center;
@@ -33,21 +33,13 @@ img {
     justify-content: space-between;
     min-height: 100vh;
     padding: 80px 0px;
-    margin-top: 9%; /* Ajusta para dejar espacio al menú */
-    
+    margin-top: 9%;
 }
 
-.navbar {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-/* Menú llamativo */
 .menu {
-    background-color: rgba(255, 255, 255, 0.9); /* Ligera transparencia */
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
-    padding: 15px 50px; /* Ajusta el padding para espaciar mejor el contenido */
+    background-color: rgba(255, 255, 255, 0.9);
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    padding: 15px 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -58,52 +50,56 @@ img {
     z-index: 1000;
 }
 
-
 .logo img {
     max-width: 150px;
-    object-fit:contain;
+    object-fit: contain;
 }
 
-.menu .navbar ul li {
-    position: relative;
-    float: left;
-}
-
-.menu .navbar ul li a {
-    font-size: 34px; /* Ajusta el tamaño de la fuente si es muy grande */
-    color: #0f165ae8;
-    padding: 10px 20px; /* Reduce el espaciado para compactar el menú */
-    border-radius: 10px;
-    transition: all 0.3s ease;
-}
-
-.menu .navbar ul {
+.navbar ul {
     display: flex;
     gap: 20px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
-.menu .navbar ul li a:hover {
+.navbar ul li a {
+    font-size: 34px;
+    color: #0f165ae8;
+    padding: 10px 20px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: block;
+}
+
+.navbar ul li a:hover {
     background-color: #ffc83c;
     color: #fff;
 }
 
-#menu {
+/* Menú hamburguesa */
+.menu-toggle {
     display: none;
-}
-
-.menu-icono {
-    width: 25px;
-    height: 25px;
-    display: block;
-}
-
-.menu label {
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
     cursor: pointer;
-    display: none;
+    position: relative;
+    z-index: 100;
 }
 
+.menu-toggle span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: #0f165ae8;
+    transition: all 0.3s ease;
+    border-radius: 3px;
+}
 
-/* Header*/ 
+/* Header content */
 .header-content {
     display: flex;
 }
@@ -118,7 +114,6 @@ img {
     line-height: 1.2;
     margin-bottom: 25px;
     text-shadow: -2px -2px 1px #000, 2px 2px 1px #000, -2px 2px 1px #000, 2px -2px 1px #000;
-
 }
 
 .header-txt p {
@@ -127,6 +122,133 @@ img {
     margin-bottom: 45px;
 }
 
+/* Estilos del botón hamburguesa */
+.menu-btn {
+    display: none;
+    cursor: pointer;
+    position: relative;
+    width: 30px;
+    height: 30px;
+    padding: 10px;
+    z-index: 100;
+}
+
+.menu-btn__burger {
+    width: 30px;
+    height: 3px;
+    background-color: #333;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+}
+
+.menu-btn__burger::before,
+.menu-btn__burger::after {
+    content: '';
+    position: absolute;
+    width: 30px;
+    height: 3px;
+    background-color: #333;
+    transition: all 0.3s ease;
+}
+
+.menu-btn__burger::before {
+    transform: translateY(-10px);
+}
+
+.menu-btn__burger::after {
+    transform: translateY(10px);
+}
+
+/* Animación del botón hamburguesa */
+.menu-btn.open .menu-btn__burger {
+    transform: translateX(-50px);
+    background: transparent;
+}
+
+.menu-btn.open .menu-btn__burger::before {
+    transform: rotate(45deg) translate(35px, -35px);
+}
+
+.menu-btn.open .menu-btn__burger::after {
+    transform: rotate(-45deg) translate(35px, 35px);
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 2rem;
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: #333;
+}
+
+
+@media screen and (max-width: 768px) {
+    .menu-btn {
+        display: block;
+        position: absolute;
+        right: 1rem;
+        top: 1rem;
+    }
+
+    .navbar {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 100%; /* Ocupa toda la pantalla */
+        height: 100vh;
+        background-color: white;
+        padding-top: 60px;
+        transition: 0.3s ease;
+    }
+
+    .navbar.active {
+        right: 0;
+    }
+
+    .navbar ul {
+        display: flex;
+        flex-direction: column; /* Organiza los elementos en columna */
+        width: 100%; /* Ocupa todo el ancho disponible */
+        padding: 5px; /* Agrega un poco de espacio entre los elementos */
+    }
+
+    .navbar ul li {
+        width: 100%; /* Cada elemento ocupa todo el ancho */
+        text-align: left; /* Alinea el texto a la izquierda */
+        margin-bottom: 10px; /* Agrega un poco de espacio entre los elementos */
+    }
+
+    .navbar ul li a {
+        display: block;
+        font-size: 1.2rem;
+        padding: 10px 0;
+        text-decoration: none; /* Elimina la decoración del texto */
+        color: #333; /* Establece el color del texto */
+    }
+
+    .navbar ul li a:hover {
+        background-color: #f0f0f0; /* Agrega un fondo al texto al pasar el mouse */
+    }
+
+    /* Animación del botón hamburguesa */
+    .menu-btn.open .menu-btn__burger {
+        transform: rotate(45deg);
+    }
+
+    .menu-btn.open .menu-btn__burger::before {
+        transform: rotate(90deg) translate(0, 0);
+    }
+
+    .menu-btn.open .menu-btn__burger::after {
+        transform: rotate(90deg) translate(0, 0);
+    }
+}
+/* Botones */
 .buttons {
     display: flex;
     gap: 20px;
@@ -134,29 +256,28 @@ img {
 
 .btn-1, .btn-conoce {
     display: inline-block;
-    padding: 20px 70px; /* Tamaño igual para ambos botones */
+    padding: 20px 70px;
     border: 2px solid #FF5A2C;
     border-radius: 25px;
     font-size: 28px;
     color: #ff5a2c;
     text-align: center;
+    text-decoration: none;
 }
 
-.btn-1:hover, .btn-2:hover, .btn-3:hover, .btn-conoce:hover{
+.btn-1:hover, .btn-2:hover, .btn-3:hover, .btn-conoce:hover {
     background-color: #FFF;
     color: #ff5a2c;
 }
 
-.btn-principal{
+.btn-principal {
     background-color: #FF5A2C;
-    color: #FFFFFF; 
+    color: #FFFFFF;
 }
 
 .btn-principal:hover {
     color: #FF5A2C;
 }
-
-
 .tarjetas {
     display: flex;
     gap: 20px; /* Espacio entre las tarjetas */
